@@ -1,0 +1,1802 @@
+[
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_8.png",
+    "post_image_path": "test_images\\beriut_explosion_post_8.png",
+    "ground_truth": 3,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      4,
+      5,
+      13,
+      15,
+      3
+    ],
+    "options_str": "A. 4, B. 5, C. 13, D. 15, E. 3.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_748.png",
+    "post_image_path": "test_images\\ian_hurricane_post_748.png",
+    "ground_truth": 124,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "B",
+    "options_list": [
+      173,
+      124,
+      148,
+      75,
+      100
+    ],
+    "options_str": "A. 173, B. 124, C. 148, D. 75, E. 100.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000142_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000142_post_disaster.png",
+    "ground_truth": 146,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "A",
+    "options_list": [
+      146,
+      204,
+      175,
+      88,
+      117
+    ],
+    "options_str": "A. 146, B. 204, C. 175, D. 88, E. 117.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_florence_00000202_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_florence_00000202_post_disaster.png",
+    "ground_truth": 53,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      74,
+      63,
+      32,
+      53,
+      43
+    ],
+    "options_str": "A. 74, B. 63, C. 32, D. 53, E. 43.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000513_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000513_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "D",
+    "options_list": [
+      0,
+      6,
+      13,
+      1,
+      19
+    ],
+    "options_str": "A. 0, B. 6, C. 13, D. 1, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000323_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000323_post_disaster.png",
+    "ground_truth": 24,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "A",
+    "options_list": [
+      24,
+      33,
+      28,
+      15,
+      20
+    ],
+    "options_str": "A. 24, B. 33, C. 28, D. 15, E. 20.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000193_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000193_post_disaster.png",
+    "ground_truth": 126,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "A",
+    "options_list": [
+      126,
+      176,
+      151,
+      76,
+      101
+    ],
+    "options_str": "A. 126, B. 176, C. 151, D. 76, E. 101.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000110_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000110_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      2,
+      8,
+      14,
+      16,
+      1
+    ],
+    "options_str": "A. 2, B. 8, C. 14, D. 16, E. 1.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_249.png",
+    "post_image_path": "test_images\\turkey_earthquake1_sar_post_249.png",
+    "ground_truth": 60,
+    "post_image_type": "SAR",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "D",
+    "options_list": [
+      84,
+      72,
+      36,
+      60,
+      48
+    ],
+    "options_str": "A. 84, B. 72, C. 36, D. 60, E. 48.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_matthew_00000082_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_matthew_00000082_post_disaster.png",
+    "ground_truth": 71,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were partially harmed or compromised?",
+    "ground_truth_option": "A",
+    "options_list": [
+      71,
+      99,
+      85,
+      43,
+      57
+    ],
+    "options_str": "A. 71, B. 99, C. 85, D. 43, E. 57.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_359.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_359.png",
+    "ground_truth": 6,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      6,
+      3,
+      7,
+      14,
+      16
+    ],
+    "options_str": "A. 6, B. 3, C. 7, D. 14, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000028_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000028_post_disaster.png",
+    "ground_truth": 79,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      110,
+      94,
+      48,
+      64,
+      79
+    ],
+    "options_str": "A. 110, B. 94, C. 48, D. 64, E. 79.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_671.png",
+    "post_image_path": "test_images\\ian_hurricane_post_671.png",
+    "ground_truth": 189,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      264,
+      226,
+      114,
+      152,
+      189
+    ],
+    "options_str": "A. 264, B. 226, C. 114, D. 152, E. 189.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_243.png",
+    "post_image_path": "test_images\\turkey_earthquake1_post_243.png",
+    "ground_truth": 65,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "D",
+    "options_list": [
+      91,
+      78,
+      39,
+      65,
+      52
+    ],
+    "options_str": "A. 91, B. 78, C. 39, D. 65, E. 52.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000332_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000332_post_disaster.png",
+    "ground_truth": 14,
+    "post_image_type": "Optical",
+    "prompts": "What's the count of buildings that were utterly demolished?",
+    "ground_truth_option": "A",
+    "options_list": [
+      14,
+      2,
+      8,
+      13,
+      18
+    ],
+    "options_str": "A. 14, B. 2, C. 8, D. 13, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Totally-destroyed building counting."
+  },
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_56.png",
+    "post_image_path": "test_images\\beriut_explosion_post_56.png",
+    "ground_truth": 177,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "D",
+    "options_list": [
+      247,
+      212,
+      107,
+      177,
+      142
+    ],
+    "options_str": "A. 247, B. 212, C. 107, D. 177, E. 142.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000080_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000080_post_disaster.png",
+    "ground_truth": 124,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      173,
+      148,
+      75,
+      124,
+      100
+    ],
+    "options_str": "A. 173, B. 148, C. 75, D. 124, E. 100.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00001523_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00001523_post_disaster.png",
+    "ground_truth": 4,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      1,
+      6,
+      11,
+      17,
+      4
+    ],
+    "options_str": "A. 1, B. 6, C. 11, D. 17, E. 4.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000148_post_disaster.png",
+    "ground_truth": 11,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "D",
+    "options_list": [
+      1,
+      9,
+      14,
+      11,
+      16
+    ],
+    "options_str": "A. 1, B. 9, C. 14, D. 11, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_217.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_217.png",
+    "ground_truth": 24,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "B",
+    "options_list": [
+      33,
+      24,
+      28,
+      15,
+      20
+    ],
+    "options_str": "A. 33, B. 24, C. 28, D. 15, E. 20.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_334.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_334.png",
+    "ground_truth": 122,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      122,
+      170,
+      146,
+      74,
+      98
+    ],
+    "options_str": "A. 122, B. 170, C. 146, D. 74, E. 98.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000383_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000383_post_disaster.png",
+    "ground_truth": 68,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "C",
+    "options_list": [
+      95,
+      81,
+      68,
+      41,
+      55
+    ],
+    "options_str": "A. 95, B. 81, C. 68, D. 41, E. 55.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000403_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000403_post_disaster.png",
+    "ground_truth": 29,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      40,
+      34,
+      18,
+      24,
+      29
+    ],
+    "options_str": "A. 40, B. 34, C. 18, D. 24, E. 29.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000132_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000132_post_disaster.png",
+    "ground_truth": 216,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that were partially damaged in the incident.",
+    "ground_truth_option": "C",
+    "options_list": [
+      302,
+      259,
+      216,
+      130,
+      173
+    ],
+    "options_str": "A. 302, B. 259, C. 216, D. 130, E. 173.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000018_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000018_post_disaster.png",
+    "ground_truth": 9,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      0,
+      9,
+      6,
+      12,
+      18
+    ],
+    "options_str": "A. 0, B. 9, C. 6, D. 12, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000167_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000167_post_disaster.png",
+    "ground_truth": 14,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that were partially damaged in the incident.",
+    "ground_truth_option": "D",
+    "options_list": [
+      3,
+      6,
+      10,
+      14,
+      16
+    ],
+    "options_str": "A. 3, B. 6, C. 10, D. 14, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000148_post_disaster.png",
+    "ground_truth": 61,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      85,
+      73,
+      37,
+      49,
+      61
+    ],
+    "options_str": "A. 85, B. 73, C. 37, D. 49, E. 61.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000003_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000003_post_disaster.png",
+    "ground_truth": 318,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "C",
+    "options_list": [
+      445,
+      381,
+      318,
+      191,
+      255
+    ],
+    "options_str": "A. 445, B. 381, C. 318, D. 191, E. 255.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\woolsey_fire_00000489_pre_disaster.png",
+    "post_image_path": "test_images\\woolsey_fire_00000489_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      0,
+      1,
+      6,
+      12,
+      15
+    ],
+    "options_str": "A. 0, B. 1, C. 6, D. 12, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_334.png",
+    "post_image_path": "test_images\\turkey_earthquake4_sar_post_334.png",
+    "ground_truth": 122,
+    "post_image_type": "SAR",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "B",
+    "options_list": [
+      170,
+      122,
+      146,
+      74,
+      98
+    ],
+    "options_str": "A. 170, B. 122, C. 146, D. 74, E. 98.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\tuscaloosa_tornado_00000085_pre_disaster.png",
+    "post_image_path": "test_images\\tuscaloosa_tornado_00000085_post_disaster.png",
+    "ground_truth": 32,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      44,
+      38,
+      20,
+      32,
+      26
+    ],
+    "options_str": "A. 44, B. 38, C. 20, D. 32, E. 26.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_316.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_316.png",
+    "ground_truth": 112,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "B",
+    "options_list": [
+      156,
+      112,
+      134,
+      68,
+      90
+    ],
+    "options_str": "A. 156, B. 112, C. 134, D. 68, E. 90.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00001317_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00001317_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "A",
+    "options_list": [
+      1,
+      3,
+      8,
+      14,
+      15
+    ],
+    "options_str": "A. 1, B. 3, C. 8, D. 14, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\tuscaloosa_tornado_00000076_pre_disaster.png",
+    "post_image_path": "test_images\\tuscaloosa_tornado_00000076_post_disaster.png",
+    "ground_truth": 21,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      29,
+      25,
+      13,
+      17,
+      21
+    ],
+    "options_str": "A. 29, B. 25, C. 13, D. 17, E. 21.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake7_pre_603.png",
+    "post_image_path": "test_images\\turkey_earthquake7_post_603.png",
+    "ground_truth": 7,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      3,
+      7,
+      9,
+      11,
+      15
+    ],
+    "options_str": "A. 3, B. 7, C. 9, D. 11, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000088_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000088_post_disaster.png",
+    "ground_truth": 66,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "B",
+    "options_list": [
+      92,
+      66,
+      79,
+      40,
+      53
+    ],
+    "options_str": "A. 92, B. 66, C. 79, D. 40, E. 53.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000022_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000022_post_disaster.png",
+    "ground_truth": 2,
+    "post_image_type": "Optical",
+    "prompts": "What's the count of buildings that partially sustained damage?",
+    "ground_truth_option": "E",
+    "options_list": [
+      1,
+      8,
+      10,
+      16,
+      2
+    ],
+    "options_str": "A. 1, B. 8, C. 10, D. 16, E. 2.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000098_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000098_post_disaster.png",
+    "ground_truth": 119,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      166,
+      142,
+      72,
+      119,
+      96
+    ],
+    "options_str": "A. 166, B. 142, C. 72, D. 119, E. 96.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000015_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000015_post_disaster.png",
+    "ground_truth": 97,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      97,
+      135,
+      116,
+      59,
+      78
+    ],
+    "options_str": "A. 97, B. 135, C. 116, D. 59, E. 78.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00001761_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00001761_post_disaster.png",
+    "ground_truth": 3,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that were totally destroyed.",
+    "ground_truth_option": "B",
+    "options_list": [
+      0,
+      3,
+      5,
+      12,
+      15
+    ],
+    "options_str": "A. 0, B. 3, C. 5, D. 12, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Totally-destroyed building counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_698.png",
+    "post_image_path": "test_images\\ian_hurricane_post_698.png",
+    "ground_truth": 72,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "D",
+    "options_list": [
+      100,
+      86,
+      44,
+      72,
+      58
+    ],
+    "options_str": "A. 100, B. 86, C. 44, D. 72, E. 58.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000140_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000140_post_disaster.png",
+    "ground_truth": 93,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "D",
+    "options_list": [
+      130,
+      111,
+      56,
+      93,
+      75
+    ],
+    "options_str": "A. 130, B. 111, C. 56, D. 93, E. 75.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000036_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000036_post_disaster.png",
+    "ground_truth": 235,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "B",
+    "options_list": [
+      329,
+      235,
+      282,
+      141,
+      188
+    ],
+    "options_str": "A. 329, B. 235, C. 282, D. 141, E. 188.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_739.png",
+    "post_image_path": "test_images\\ian_hurricane_post_739.png",
+    "ground_truth": 179,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      179,
+      250,
+      214,
+      108,
+      144
+    ],
+    "options_str": "A. 179, B. 250, C. 214, D. 108, E. 144.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_353.png",
+    "post_image_path": "test_images\\turkey_earthquake5_sar_post_353.png",
+    "ground_truth": 121,
+    "post_image_type": "SAR",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "C",
+    "options_list": [
+      169,
+      145,
+      121,
+      73,
+      97
+    ],
+    "options_str": "A. 169, B. 145, C. 121, D. 73, E. 97.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_212.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_212.png",
+    "ground_truth": 42,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "A",
+    "options_list": [
+      42,
+      58,
+      50,
+      26,
+      34
+    ],
+    "options_str": "A. 42, B. 58, C. 50, D. 26, E. 34.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000124_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000124_post_disaster.png",
+    "ground_truth": 13,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "B",
+    "options_list": [
+      1,
+      13,
+      9,
+      10,
+      18
+    ],
+    "options_str": "A. 1, B. 13, C. 9, D. 10, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_233.png",
+    "post_image_path": "test_images\\turkey_earthquake1_post_233.png",
+    "ground_truth": 40,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "C",
+    "options_list": [
+      56,
+      48,
+      40,
+      24,
+      32
+    ],
+    "options_str": "A. 56, B. 48, C. 40, D. 24, E. 32.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000125_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000125_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      2,
+      1,
+      5,
+      13,
+      18
+    ],
+    "options_str": "A. 2, B. 1, C. 5, D. 13, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000014_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000014_post_disaster.png",
+    "ground_truth": 117,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      117,
+      163,
+      140,
+      71,
+      94
+    ],
+    "options_str": "A. 117, B. 163, C. 140, D. 71, E. 94.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\sunda_tsunami_00000002_pre_disaster.png",
+    "post_image_path": "test_images\\sunda_tsunami_00000002_post_disaster.png",
+    "ground_truth": 17,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      1,
+      6,
+      11,
+      17,
+      19
+    ],
+    "options_str": "A. 1, B. 6, C. 11, D. 17, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000362_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000362_post_disaster.png",
+    "ground_truth": 86,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that suffered incomplete damage.",
+    "ground_truth_option": "C",
+    "options_list": [
+      120,
+      103,
+      86,
+      52,
+      69
+    ],
+    "options_str": "A. 120, B. 103, C. 86, D. 52, E. 69.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_349.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_349.png",
+    "ground_truth": 105,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "C",
+    "options_list": [
+      147,
+      126,
+      105,
+      63,
+      84
+    ],
+    "options_str": "A. 147, B. 126, C. 105, D. 63, E. 84.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_58.png",
+    "post_image_path": "test_images\\beriut_explosion_sar_post_58.png",
+    "ground_truth": 163,
+    "post_image_type": "SAR",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "A",
+    "options_list": [
+      163,
+      228,
+      195,
+      98,
+      131
+    ],
+    "options_str": "A. 163, B. 228, C. 195, D. 98, E. 131.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000243_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000243_post_disaster.png",
+    "ground_truth": 60,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that were totally destroyed.",
+    "ground_truth_option": "E",
+    "options_list": [
+      84,
+      72,
+      36,
+      48,
+      60
+    ],
+    "options_str": "A. 84, B. 72, C. 36, D. 48, E. 60.",
+    "task": "Building Damage Counting",
+    "cls_description": "Totally-destroyed building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000086_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000086_post_disaster.png",
+    "ground_truth": 156,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "C",
+    "options_list": [
+      218,
+      187,
+      156,
+      94,
+      125
+    ],
+    "options_str": "A. 218, B. 187, C. 156, D. 94, E. 125.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000066_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000066_post_disaster.png",
+    "ground_truth": 2,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "A",
+    "options_list": [
+      2,
+      0,
+      7,
+      11,
+      15
+    ],
+    "options_str": "A. 2, B. 0, C. 7, D. 11, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000167_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000167_post_disaster.png",
+    "ground_truth": 27,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "B",
+    "options_list": [
+      37,
+      27,
+      32,
+      17,
+      22
+    ],
+    "options_str": "A. 37, B. 27, C. 32, D. 17, E. 22.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000217_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000217_post_disaster.png",
+    "ground_truth": 33,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "D",
+    "options_list": [
+      46,
+      39,
+      20,
+      33,
+      27
+    ],
+    "options_str": "A. 46, B. 39, C. 20, D. 33, E. 27.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000046_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000046_post_disaster.png",
+    "ground_truth": 8,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      2,
+      9,
+      13,
+      19,
+      8
+    ],
+    "options_str": "A. 2, B. 9, C. 13, D. 19, E. 8.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000152_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000152_post_disaster.png",
+    "ground_truth": 4,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      4,
+      3,
+      8,
+      13,
+      18
+    ],
+    "options_str": "A. 4, B. 3, C. 8, D. 13, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000693_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000693_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      4,
+      5,
+      14,
+      19,
+      1
+    ],
+    "options_str": "A. 4, B. 5, C. 14, D. 19, E. 1.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hawaii_wildfire_pre_657.png",
+    "post_image_path": "test_images\\hawaii_wildfire_post_657.png",
+    "ground_truth": 9,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "B",
+    "options_list": [
+      1,
+      9,
+      8,
+      10,
+      19
+    ],
+    "options_str": "A. 1, B. 9, C. 8, D. 10, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000148_post_disaster.png",
+    "ground_truth": 3,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "C",
+    "options_list": [
+      4,
+      9,
+      3,
+      14,
+      15
+    ],
+    "options_str": "A. 4, B. 9, C. 3, D. 14, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_306.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_306.png",
+    "ground_truth": 58,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "D",
+    "options_list": [
+      81,
+      69,
+      35,
+      58,
+      47
+    ],
+    "options_str": "A. 81, B. 69, C. 35, D. 58, E. 47.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_336.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_336.png",
+    "ground_truth": 179,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "D",
+    "options_list": [
+      250,
+      214,
+      108,
+      179,
+      144
+    ],
+    "options_str": "A. 250, B. 214, C. 108, D. 179, E. 144.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000087_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000087_post_disaster.png",
+    "ground_truth": 17,
+    "post_image_type": "Optical",
+    "prompts": "What's the count of buildings that partially sustained damage?",
+    "ground_truth_option": "A",
+    "options_list": [
+      17,
+      2,
+      5,
+      12,
+      18
+    ],
+    "options_str": "A. 17, B. 2, C. 5, D. 12, E. 18.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000160_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000160_post_disaster.png",
+    "ground_truth": 9,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      1,
+      9,
+      5,
+      10,
+      16
+    ],
+    "options_str": "A. 1, B. 9, C. 5, D. 10, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_michael_00000441_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_michael_00000441_post_disaster.png",
+    "ground_truth": 56,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      78,
+      67,
+      34,
+      45,
+      56
+    ],
+    "options_str": "A. 78, B. 67, C. 34, D. 45, E. 56.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000000_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000000_post_disaster.png",
+    "ground_truth": 4,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "E",
+    "options_list": [
+      2,
+      7,
+      10,
+      19,
+      4
+    ],
+    "options_str": "A. 2, B. 7, C. 10, D. 19, E. 4.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000025_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000025_post_disaster.png",
+    "ground_truth": 5,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were partially harmed or compromised?",
+    "ground_truth_option": "A",
+    "options_list": [
+      5,
+      1,
+      6,
+      11,
+      19
+    ],
+    "options_str": "A. 5, B. 1, C. 6, D. 11, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000212_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000212_post_disaster.png",
+    "ground_truth": 276,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      386,
+      331,
+      166,
+      221,
+      276
+    ],
+    "options_str": "A. 386, B. 331, C. 166, D. 221, E. 276.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000301_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000301_post_disaster.png",
+    "ground_truth": 7,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that suffered incomplete damage.",
+    "ground_truth_option": "A",
+    "options_list": [
+      7,
+      1,
+      8,
+      14,
+      15
+    ],
+    "options_str": "A. 7, B. 1, C. 8, D. 14, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_205.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_205.png",
+    "ground_truth": 3,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "C",
+    "options_list": [
+      4,
+      5,
+      3,
+      13,
+      15
+    ],
+    "options_str": "A. 4, B. 5, C. 3, D. 13, E. 15.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000030_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000030_post_disaster.png",
+    "ground_truth": 32,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "B",
+    "options_list": [
+      44,
+      32,
+      38,
+      20,
+      26
+    ],
+    "options_str": "A. 44, B. 32, C. 38, D. 20, E. 26.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000123_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000123_post_disaster.png",
+    "ground_truth": 96,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "C",
+    "options_list": [
+      134,
+      115,
+      96,
+      58,
+      77
+    ],
+    "options_str": "A. 134, B. 115, C. 96, D. 58, E. 77.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_78.png",
+    "post_image_path": "test_images\\libya_flood_sar_post_78.png",
+    "ground_truth": 5,
+    "post_image_type": "SAR",
+    "prompts": "How many buildings were partially harmed or compromised?",
+    "ground_truth_option": "E",
+    "options_list": [
+      3,
+      6,
+      11,
+      18,
+      5
+    ],
+    "options_str": "A. 3, B. 6, C. 11, D. 18, E. 5.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_715.png",
+    "post_image_path": "test_images\\ian_hurricane_post_715.png",
+    "ground_truth": 170,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      170,
+      238,
+      204,
+      102,
+      136
+    ],
+    "options_str": "A. 170, B. 238, C. 204, D. 102, E. 136.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000083_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000083_post_disaster.png",
+    "ground_truth": 39,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "A",
+    "options_list": [
+      39,
+      54,
+      46,
+      24,
+      32
+    ],
+    "options_str": "A. 39, B. 54, C. 46, D. 24, E. 32.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\sunda_tsunami_00000130_pre_disaster.png",
+    "post_image_path": "test_images\\sunda_tsunami_00000130_post_disaster.png",
+    "ground_truth": 11,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      2,
+      7,
+      13,
+      18,
+      11
+    ],
+    "options_str": "A. 2, B. 7, C. 13, D. 18, E. 11.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hawaii_wildfire_pre_647.png",
+    "post_image_path": "test_images\\hawaii_wildfire_sar_post_647.png",
+    "ground_truth": 27,
+    "post_image_type": "SAR",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "D",
+    "options_list": [
+      37,
+      32,
+      17,
+      27,
+      22
+    ],
+    "options_str": "A. 37, B. 32, C. 17, D. 27, E. 22.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_284.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_284.png",
+    "ground_truth": 72,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "C",
+    "options_list": [
+      100,
+      86,
+      72,
+      44,
+      58
+    ],
+    "options_str": "A. 100, B. 86, C. 72, D. 44, E. 58.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000530_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000530_post_disaster.png",
+    "ground_truth": 172,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "E",
+    "options_list": [
+      240,
+      206,
+      104,
+      138,
+      172
+    ],
+    "options_str": "A. 240, B. 206, C. 104, D. 138, E. 172.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000182_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000182_post_disaster.png",
+    "ground_truth": 173,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      242,
+      207,
+      104,
+      139,
+      173
+    ],
+    "options_str": "A. 242, B. 207, C. 104, D. 139, E. 173.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_69.png",
+    "post_image_path": "test_images\\libya_flood_post_69.png",
+    "ground_truth": 8,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      1,
+      8,
+      5,
+      12,
+      19
+    ],
+    "options_str": "A. 1, B. 8, C. 5, D. 12, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_michael_00000212_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_michael_00000212_post_disaster.png",
+    "ground_truth": 4,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      0,
+      7,
+      12,
+      15,
+      4
+    ],
+    "options_str": "A. 0, B. 7, C. 12, D. 15, E. 4.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000608_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000608_post_disaster.png",
+    "ground_truth": 112,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      156,
+      134,
+      68,
+      90,
+      112
+    ],
+    "options_str": "A. 156, B. 134, C. 68, D. 90, E. 112.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00000189_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00000189_post_disaster.png",
+    "ground_truth": 13,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "C",
+    "options_list": [
+      1,
+      8,
+      13,
+      14,
+      19
+    ],
+    "options_str": "A. 1, B. 8, C. 13, D. 14, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake7_pre_597.png",
+    "post_image_path": "test_images\\turkey_earthquake7_post_597.png",
+    "ground_truth": 2,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      0,
+      2,
+      5,
+      12,
+      17
+    ],
+    "options_str": "A. 0, B. 2, C. 5, D. 12, E. 17.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000001_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000001_post_disaster.png",
+    "ground_truth": 4,
+    "post_image_type": "Optical",
+    "prompts": "What's the count of buildings that partially sustained damage?",
+    "ground_truth_option": "D",
+    "options_list": [
+      1,
+      8,
+      12,
+      4,
+      16
+    ],
+    "options_str": "A. 1, B. 8, C. 12, D. 4, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Damaged building counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000010_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000010_post_disaster.png",
+    "ground_truth": 1,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that were totally destroyed.",
+    "ground_truth_option": "D",
+    "options_list": [
+      2,
+      5,
+      13,
+      1,
+      19
+    ],
+    "options_str": "A. 2, B. 5, C. 13, D. 1, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Totally-destroyed building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_232.png",
+    "post_image_path": "test_images\\turkey_earthquake1_sar_post_232.png",
+    "ground_truth": 9,
+    "post_image_type": "SAR",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "A",
+    "options_list": [
+      9,
+      3,
+      5,
+      11,
+      16
+    ],
+    "options_str": "A. 9, B. 3, C. 5, D. 11, E. 16.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_113.png",
+    "post_image_path": "test_images\\libya_flood_post_113.png",
+    "ground_truth": 44,
+    "post_image_type": "Optical",
+    "prompts": "Calculate the number of intact buildings remaining post-disaster.",
+    "ground_truth_option": "E",
+    "options_list": [
+      61,
+      52,
+      27,
+      36,
+      44
+    ],
+    "options_str": "A. 61, B. 52, C. 27, D. 36, E. 44.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000756_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000756_post_disaster.png",
+    "ground_truth": 9,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "B",
+    "options_list": [
+      1,
+      9,
+      5,
+      14,
+      17
+    ],
+    "options_str": "A. 1, B. 9, C. 5, D. 14, E. 17.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_350.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_350.png",
+    "ground_truth": 59,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "D",
+    "options_list": [
+      82,
+      70,
+      36,
+      59,
+      48
+    ],
+    "options_str": "A. 82, B. 70, C. 36, D. 59, E. 48.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\midwest_flooding_00000314_pre_disaster.png",
+    "post_image_path": "test_images\\midwest_flooding_00000314_post_disaster.png",
+    "ground_truth": 23,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "E",
+    "options_list": [
+      32,
+      27,
+      14,
+      19,
+      23
+    ],
+    "options_str": "A. 32, B. 27, C. 14, D. 19, E. 23.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000002_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000002_post_disaster.png",
+    "ground_truth": 118,
+    "post_image_type": "Optical",
+    "prompts": "What is the total number of undamaged buildings following the disaster?",
+    "ground_truth_option": "E",
+    "options_list": [
+      165,
+      141,
+      71,
+      95,
+      118
+    ],
+    "options_str": "A. 165, B. 141, C. 71, D. 95, E. 118.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00001720_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00001720_post_disaster.png",
+    "ground_truth": 6,
+    "post_image_type": "Optical",
+    "prompts": "How many buildings were left undamaged in the aftermath of the disaster?",
+    "ground_truth_option": "C",
+    "options_list": [
+      4,
+      7,
+      6,
+      11,
+      19
+    ],
+    "options_str": "A. 4, B. 7, C. 6, D. 11, E. 19.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_119.png",
+    "post_image_path": "test_images\\libya_flood_post_119.png",
+    "ground_truth": 61,
+    "post_image_type": "Optical",
+    "prompts": "Count the buildings that remained intact after the disaster occurred.",
+    "ground_truth_option": "E",
+    "options_list": [
+      85,
+      73,
+      37,
+      49,
+      61
+    ],
+    "options_str": "A. 85, B. 73, C. 37, D. 49, E. 61.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000035_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000035_post_disaster.png",
+    "ground_truth": 72,
+    "post_image_type": "Optical",
+    "prompts": "Enumerate the total intact buildings that survived the disaster event.",
+    "ground_truth_option": "C",
+    "options_list": [
+      100,
+      86,
+      72,
+      44,
+      58
+    ],
+    "options_str": "A. 100, B. 86, C. 72, D. 44, E. 58.",
+    "task": "Building Damage Counting",
+    "cls_description": "Intact building counting."
+  }
+]

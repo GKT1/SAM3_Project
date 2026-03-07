@@ -1,0 +1,1802 @@
+[
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_8.png",
+    "post_image_path": "test_images\\beriut_explosion_post_8.png",
+    "ground_truth": "9.7%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "2.12%",
+      "4.1%",
+      "9.7%",
+      "6.58%",
+      "9.76%"
+    ],
+    "options_str": "A. 2.12%, B. 4.1%, C. 9.7%, D. 6.58%, E. 9.76%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_748.png",
+    "post_image_path": "test_images\\ian_hurricane_post_748.png",
+    "ground_truth": "7.3%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "0.75%",
+      "3.32%",
+      "7.3%",
+      "5.26%",
+      "7.7%"
+    ],
+    "options_str": "A. 0.75%, B. 3.32%, C. 7.3%, D. 5.26%, E. 7.7%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000142_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000142_post_disaster.png",
+    "ground_truth": "8.56%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.37%",
+      "8.56%",
+      "3.62%",
+      "5.11%",
+      "9.86%"
+    ],
+    "options_str": "A. 0.37%, B. 8.56%, C. 3.62%, D. 5.11%, E. 9.86%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_florence_00000202_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_florence_00000202_post_disaster.png",
+    "ground_truth": "9.33%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "9.33%",
+      "2.18%",
+      "3.12%",
+      "7.12%",
+      "9.89%"
+    ],
+    "options_str": "A. 9.33%, B. 2.18%, C. 3.12%, D. 7.12%, E. 9.89%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000513_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000513_post_disaster.png",
+    "ground_truth": "2.04%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "2.33%",
+      "3.99%",
+      "5.36%",
+      "2.04%",
+      "8.09%"
+    ],
+    "options_str": "A. 2.33%, B. 3.99%, C. 5.36%, D. 2.04%, E. 8.09%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000323_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000323_post_disaster.png",
+    "ground_truth": "0.75%",
+    "post_image_type": "Optical",
+    "prompts": "What is the proportion of the complete image that consists of flooded roads?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.25%",
+      "3.4%",
+      "0.75%",
+      "6.48%",
+      "8.43%"
+    ],
+    "options_str": "A. 1.25%, B. 3.4%, C. 0.75%, D. 6.48%, E. 8.43%.",
+    "task": "Road Damage Counting",
+    "cls_description": "flooding road counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000193_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000193_post_disaster.png",
+    "ground_truth": "5.36%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.89%",
+      "3.87%",
+      "5.54%",
+      "8.02%",
+      "5.36%"
+    ],
+    "options_str": "A. 1.89%, B. 3.87%, C. 5.54%, D. 8.02%, E. 5.36%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000110_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000110_post_disaster.png",
+    "ground_truth": "3.5%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "1.33%",
+      "2.8%",
+      "6.33%",
+      "3.5%",
+      "7.51%"
+    ],
+    "options_str": "A. 1.33%, B. 2.8%, C. 6.33%, D. 3.5%, E. 7.51%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_249.png",
+    "post_image_path": "test_images\\turkey_earthquake1_sar_post_249.png",
+    "ground_truth": "25.07%",
+    "post_image_type": "SAR",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "35.1%",
+      "25.07%",
+      "30.08%",
+      "15.04%",
+      "20.06%"
+    ],
+    "options_str": "A. 35.1%, B. 25.07%, C. 30.08%, D. 15.04%, E. 20.06%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_matthew_00000082_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_matthew_00000082_post_disaster.png",
+    "ground_truth": "2.53%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.64%",
+      "2.53%",
+      "4.23%",
+      "6.93%",
+      "9.34%"
+    ],
+    "options_str": "A. 0.64%, B. 2.53%, C. 4.23%, D. 6.93%, E. 9.34%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_359.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_359.png",
+    "ground_truth": "4.11%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "4.11%",
+      "1.08%",
+      "3.85%",
+      "6.0%",
+      "8.72%"
+    ],
+    "options_str": "A. 4.11%, B. 1.08%, C. 3.85%, D. 6.0%, E. 8.72%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000028_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000028_post_disaster.png",
+    "ground_truth": "10.46%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "14.64%",
+      "12.55%",
+      "10.46%",
+      "6.28%",
+      "8.37%"
+    ],
+    "options_str": "A. 14.64%, B. 12.55%, C. 10.46%, D. 6.28%, E. 8.37%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_671.png",
+    "post_image_path": "test_images\\ian_hurricane_post_671.png",
+    "ground_truth": "9.14%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "9.14%",
+      "0.39%",
+      "4.44%",
+      "6.94%",
+      "9.17%"
+    ],
+    "options_str": "A. 9.14%, B. 0.39%, C. 4.44%, D. 6.94%, E. 9.17%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_243.png",
+    "post_image_path": "test_images\\turkey_earthquake1_post_243.png",
+    "ground_truth": "23.09%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "32.33%",
+      "27.71%",
+      "13.85%",
+      "23.09%",
+      "18.47%"
+    ],
+    "options_str": "A. 32.33%, B. 27.71%, C. 13.85%, D. 23.09%, E. 18.47%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\santa_rosa_wildfire_00000332_pre_disaster.png",
+    "post_image_path": "test_images\\santa_rosa_wildfire_00000332_post_disaster.png",
+    "ground_truth": "1.89%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.48%",
+      "1.89%",
+      "3.88%",
+      "6.75%",
+      "9.54%"
+    ],
+    "options_str": "A. 1.48%, B. 1.89%, C. 3.88%, D. 6.75%, E. 9.54%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_56.png",
+    "post_image_path": "test_images\\beriut_explosion_post_56.png",
+    "ground_truth": "15.1%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "21.14%",
+      "18.12%",
+      "9.06%",
+      "15.1%",
+      "12.08%"
+    ],
+    "options_str": "A. 21.14%, B. 18.12%, C. 9.06%, D. 15.1%, E. 12.08%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000080_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000080_post_disaster.png",
+    "ground_truth": "9.76%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.34%",
+      "2.66%",
+      "5.67%",
+      "9.32%",
+      "9.76%"
+    ],
+    "options_str": "A. 1.34%, B. 2.66%, C. 5.67%, D. 9.32%, E. 9.76%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00001523_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00001523_post_disaster.png",
+    "ground_truth": "0.79%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.79%",
+      "4.09%",
+      "0.79%",
+      "6.25%",
+      "7.98%"
+    ],
+    "options_str": "A. 1.79%, B. 4.09%, C. 0.79%, D. 6.25%, E. 7.98%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000148_post_disaster.png",
+    "ground_truth": "0.95%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.44%",
+      "0.95%",
+      "3.4%",
+      "5.54%",
+      "9.82%"
+    ],
+    "options_str": "A. 0.44%, B. 0.95%, C. 3.4%, D. 5.54%, E. 9.82%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_217.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_217.png",
+    "ground_truth": "8.86%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.86%",
+      "4.37%",
+      "8.86%",
+      "6.34%",
+      "9.69%"
+    ],
+    "options_str": "A. 1.86%, B. 4.37%, C. 8.86%, D. 6.34%, E. 9.69%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_334.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_334.png",
+    "ground_truth": "15.0%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "21.0%",
+      "18.0%",
+      "9.0%",
+      "15.0%",
+      "12.0%"
+    ],
+    "options_str": "A. 21.0%, B. 18.0%, C. 9.0%, D. 15.0%, E. 12.0%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000383_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000383_post_disaster.png",
+    "ground_truth": "4.77%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.07%",
+      "4.77%",
+      "4.7%",
+      "6.75%",
+      "9.75%"
+    ],
+    "options_str": "A. 0.07%, B. 4.77%, C. 4.7%, D. 6.75%, E. 9.75%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000403_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000403_post_disaster.png",
+    "ground_truth": "1.03%",
+    "post_image_type": "Optical",
+    "prompts": "What is the proportion of the complete image that consists of flooded roads?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "0.35%",
+      "3.69%",
+      "1.03%",
+      "6.5%",
+      "8.32%"
+    ],
+    "options_str": "A. 0.35%, B. 3.69%, C. 1.03%, D. 6.5%, E. 8.32%.",
+    "task": "Road Damage Counting",
+    "cls_description": "flooding road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000132_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000132_post_disaster.png",
+    "ground_truth": "10.8%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by flooded roads?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "15.12%",
+      "12.96%",
+      "10.8%",
+      "6.48%",
+      "8.64%"
+    ],
+    "options_str": "A. 15.12%, B. 12.96%, C. 10.8%, D. 6.48%, E. 8.64%.",
+    "task": "Road Damage Counting",
+    "cls_description": "flooding road counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000018_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000018_post_disaster.png",
+    "ground_truth": "4.06%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "2.3%",
+      "4.06%",
+      "3.41%",
+      "5.53%",
+      "9.24%"
+    ],
+    "options_str": "A. 2.3%, B. 4.06%, C. 3.41%, D. 5.53%, E. 9.24%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\nepal_flooding_00000167_pre_disaster.png",
+    "post_image_path": "test_images\\nepal_flooding_00000167_post_disaster.png",
+    "ground_truth": "0.96%",
+    "post_image_type": "Optical",
+    "prompts": "Calculate what fraction of the whole image is taken up by submerged roads.",
+    "ground_truth_option": "E",
+    "options_list": [
+      "0.16%",
+      "2.99%",
+      "7.11%",
+      "9.44%",
+      "0.96%"
+    ],
+    "options_str": "A. 0.16%, B. 2.99%, C. 7.11%, D. 9.44%, E. 0.96%.",
+    "task": "Road Damage Counting",
+    "cls_description": "flooding road counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000148_post_disaster.png",
+    "ground_truth": "5.69%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "E",
+    "options_list": [
+      "0.4%",
+      "4.11%",
+      "6.86%",
+      "7.6%",
+      "5.69%"
+    ],
+    "options_str": "A. 0.4%, B. 4.11%, C. 6.86%, D. 7.6%, E. 5.69%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000003_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000003_post_disaster.png",
+    "ground_truth": "12.16%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "17.02%",
+      "12.16%",
+      "14.59%",
+      "7.3%",
+      "9.73%"
+    ],
+    "options_str": "A. 17.02%, B. 12.16%, C. 14.59%, D. 7.3%, E. 9.73%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\woolsey_fire_00000489_pre_disaster.png",
+    "post_image_path": "test_images\\woolsey_fire_00000489_post_disaster.png",
+    "ground_truth": "0.99%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.23%",
+      "0.99%",
+      "2.65%",
+      "6.08%",
+      "9.77%"
+    ],
+    "options_str": "A. 0.23%, B. 0.99%, C. 2.65%, D. 6.08%, E. 9.77%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_334.png",
+    "post_image_path": "test_images\\turkey_earthquake4_sar_post_334.png",
+    "ground_truth": "15.0%",
+    "post_image_type": "SAR",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "21.0%",
+      "15.0%",
+      "18.0%",
+      "9.0%",
+      "12.0%"
+    ],
+    "options_str": "A. 21.0%, B. 15.0%, C. 18.0%, D. 9.0%, E. 12.0%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\tuscaloosa_tornado_00000085_pre_disaster.png",
+    "post_image_path": "test_images\\tuscaloosa_tornado_00000085_post_disaster.png",
+    "ground_truth": "9.33%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.85%",
+      "3.74%",
+      "5.77%",
+      "9.08%",
+      "9.33%"
+    ],
+    "options_str": "A. 1.85%, B. 3.74%, C. 5.77%, D. 9.08%, E. 9.33%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_316.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_316.png",
+    "ground_truth": "4.73%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "2.09%",
+      "4.59%",
+      "5.27%",
+      "4.73%",
+      "7.79%"
+    ],
+    "options_str": "A. 2.09%, B. 4.59%, C. 5.27%, D. 4.73%, E. 7.79%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00001317_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00001317_post_disaster.png",
+    "ground_truth": "2.83%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "2.83%",
+      "2.0%",
+      "2.59%",
+      "6.99%",
+      "8.01%"
+    ],
+    "options_str": "A. 2.83%, B. 2.0%, C. 2.59%, D. 6.99%, E. 8.01%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\tuscaloosa_tornado_00000076_pre_disaster.png",
+    "post_image_path": "test_images\\tuscaloosa_tornado_00000076_post_disaster.png",
+    "ground_truth": "5.04%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "5.04%",
+      "1.11%",
+      "3.86%",
+      "5.01%",
+      "8.51%"
+    ],
+    "options_str": "A. 5.04%, B. 1.11%, C. 3.86%, D. 5.01%, E. 8.51%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake7_pre_603.png",
+    "post_image_path": "test_images\\turkey_earthquake7_post_603.png",
+    "ground_truth": "1.67%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "2.13%",
+      "2.93%",
+      "1.67%",
+      "6.91%",
+      "8.8%"
+    ],
+    "options_str": "A. 2.13%, B. 2.93%, C. 1.67%, D. 6.91%, E. 8.8%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000088_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000088_post_disaster.png",
+    "ground_truth": "1.26%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "1.52%",
+      "4.01%",
+      "5.17%",
+      "1.26%",
+      "8.08%"
+    ],
+    "options_str": "A. 1.52%, B. 4.01%, C. 5.17%, D. 1.26%, E. 8.08%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000022_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000022_post_disaster.png",
+    "ground_truth": "8.18%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "0.32%",
+      "4.1%",
+      "5.77%",
+      "9.07%",
+      "8.18%"
+    ],
+    "options_str": "A. 0.32%, B. 4.1%, C. 5.77%, D. 9.07%, E. 8.18%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000098_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000098_post_disaster.png",
+    "ground_truth": "10.22%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "14.31%",
+      "12.26%",
+      "10.22%",
+      "6.13%",
+      "8.18%"
+    ],
+    "options_str": "A. 14.31%, B. 12.26%, C. 10.22%, D. 6.13%, E. 8.18%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000015_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000015_post_disaster.png",
+    "ground_truth": "3.73%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.02%",
+      "3.73%",
+      "2.78%",
+      "5.19%",
+      "9.91%"
+    ],
+    "options_str": "A. 0.02%, B. 3.73%, C. 2.78%, D. 5.19%, E. 9.91%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00001761_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00001761_post_disaster.png",
+    "ground_truth": "7.07%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "7.07%",
+      "1.45%",
+      "4.84%",
+      "5.55%",
+      "9.37%"
+    ],
+    "options_str": "A. 7.07%, B. 1.45%, C. 4.84%, D. 5.55%, E. 9.37%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_698.png",
+    "post_image_path": "test_images\\ian_hurricane_post_698.png",
+    "ground_truth": "4.7%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "2.07%",
+      "4.81%",
+      "5.42%",
+      "4.7%",
+      "9.34%"
+    ],
+    "options_str": "A. 2.07%, B. 4.81%, C. 5.42%, D. 4.7%, E. 9.34%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000140_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000140_post_disaster.png",
+    "ground_truth": "11.15%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "E",
+    "options_list": [
+      "15.61%",
+      "13.38%",
+      "6.69%",
+      "8.92%",
+      "11.15%"
+    ],
+    "options_str": "A. 15.61%, B. 13.38%, C. 6.69%, D. 8.92%, E. 11.15%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000036_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000036_post_disaster.png",
+    "ground_truth": "13.1%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "13.1%",
+      "18.34%",
+      "15.72%",
+      "7.86%",
+      "10.48%"
+    ],
+    "options_str": "A. 13.1%, B. 18.34%, C. 15.72%, D. 7.86%, E. 10.48%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_739.png",
+    "post_image_path": "test_images\\ian_hurricane_post_739.png",
+    "ground_truth": "9.31%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "0.8%",
+      "4.88%",
+      "5.79%",
+      "9.31%",
+      "8.81%"
+    ],
+    "options_str": "A. 0.8%, B. 4.88%, C. 5.79%, D. 9.31%, E. 8.81%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_353.png",
+    "post_image_path": "test_images\\turkey_earthquake5_sar_post_353.png",
+    "ground_truth": "22.61%",
+    "post_image_type": "SAR",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "31.65%",
+      "27.13%",
+      "13.57%",
+      "22.61%",
+      "18.09%"
+    ],
+    "options_str": "A. 31.65%, B. 27.13%, C. 13.57%, D. 22.61%, E. 18.09%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_212.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_212.png",
+    "ground_truth": "12.31%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "17.23%",
+      "14.77%",
+      "7.39%",
+      "12.31%",
+      "9.85%"
+    ],
+    "options_str": "A. 17.23%, B. 14.77%, C. 7.39%, D. 12.31%, E. 9.85%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000124_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000124_post_disaster.png",
+    "ground_truth": "1.74%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "1.74%",
+      "2.11%",
+      "3.59%",
+      "6.31%",
+      "8.33%"
+    ],
+    "options_str": "A. 1.74%, B. 2.11%, C. 3.59%, D. 6.31%, E. 8.33%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_233.png",
+    "post_image_path": "test_images\\turkey_earthquake1_post_233.png",
+    "ground_truth": "19.35%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "27.09%",
+      "23.22%",
+      "11.61%",
+      "19.35%",
+      "15.48%"
+    ],
+    "options_str": "A. 27.09%, B. 23.22%, C. 11.61%, D. 19.35%, E. 15.48%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000125_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000125_post_disaster.png",
+    "ground_truth": "11.9%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "11.9%",
+      "16.66%",
+      "14.28%",
+      "7.14%",
+      "9.52%"
+    ],
+    "options_str": "A. 11.9%, B. 16.66%, C. 14.28%, D. 7.14%, E. 9.52%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000014_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000014_post_disaster.png",
+    "ground_truth": "10.13%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "14.18%",
+      "12.16%",
+      "6.08%",
+      "10.13%",
+      "8.1%"
+    ],
+    "options_str": "A. 14.18%, B. 12.16%, C. 6.08%, D. 10.13%, E. 8.1%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\sunda_tsunami_00000002_pre_disaster.png",
+    "post_image_path": "test_images\\sunda_tsunami_00000002_post_disaster.png",
+    "ground_truth": "0.71%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "A",
+    "options_list": [
+      "0.71%",
+      "1.98%",
+      "3.33%",
+      "5.36%",
+      "9.46%"
+    ],
+    "options_str": "A. 0.71%, B. 1.98%, C. 3.33%, D. 5.36%, E. 9.46%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000362_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000362_post_disaster.png",
+    "ground_truth": "0.72%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.34%",
+      "0.72%",
+      "4.83%",
+      "6.16%",
+      "7.53%"
+    ],
+    "options_str": "A. 1.34%, B. 0.72%, C. 4.83%, D. 6.16%, E. 7.53%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_349.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_349.png",
+    "ground_truth": "12.17%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "17.04%",
+      "14.6%",
+      "12.17%",
+      "7.3%",
+      "9.74%"
+    ],
+    "options_str": "A. 17.04%, B. 14.6%, C. 12.17%, D. 7.3%, E. 9.74%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\beriut_explosion_pre_58.png",
+    "post_image_path": "test_images\\beriut_explosion_sar_post_58.png",
+    "ground_truth": "16.95%",
+    "post_image_type": "SAR",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "16.95%",
+      "23.73%",
+      "20.34%",
+      "10.17%",
+      "13.56%"
+    ],
+    "options_str": "A. 16.95%, B. 23.73%, C. 20.34%, D. 10.17%, E. 13.56%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000243_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000243_post_disaster.png",
+    "ground_truth": "0.2%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.3%",
+      "2.78%",
+      "0.2%",
+      "6.46%",
+      "7.79%"
+    ],
+    "options_str": "A. 1.3%, B. 2.78%, C. 0.2%, D. 6.46%, E. 7.79%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000086_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000086_post_disaster.png",
+    "ground_truth": "13.16%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "18.42%",
+      "15.79%",
+      "7.9%",
+      "10.53%",
+      "13.16%"
+    ],
+    "options_str": "A. 18.42%, B. 15.79%, C. 7.9%, D. 10.53%, E. 13.16%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000066_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000066_post_disaster.png",
+    "ground_truth": "4.18%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.11%",
+      "4.18%",
+      "2.82%",
+      "6.46%",
+      "9.01%"
+    ],
+    "options_str": "A. 0.11%, B. 4.18%, C. 2.82%, D. 6.46%, E. 9.01%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000167_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000167_post_disaster.png",
+    "ground_truth": "8.7%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "8.7%",
+      "1.2%",
+      "4.77%",
+      "5.49%",
+      "8.78%"
+    ],
+    "options_str": "A. 8.7%, B. 1.2%, C. 4.77%, D. 5.49%, E. 8.78%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000217_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000217_post_disaster.png",
+    "ground_truth": "1.16%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "2.46%",
+      "3.93%",
+      "6.29%",
+      "1.16%",
+      "9.17%"
+    ],
+    "options_str": "A. 2.46%, B. 3.93%, C. 6.29%, D. 1.16%, E. 9.17%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000046_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000046_post_disaster.png",
+    "ground_truth": "7.41%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.6%",
+      "7.41%",
+      "2.96%",
+      "5.3%",
+      "9.8%"
+    ],
+    "options_str": "A. 1.6%, B. 7.41%, C. 2.96%, D. 5.3%, E. 9.8%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000152_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000152_post_disaster.png",
+    "ground_truth": "0.58%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.35%",
+      "4.97%",
+      "6.63%",
+      "8.3%",
+      "0.58%"
+    ],
+    "options_str": "A. 1.35%, B. 4.97%, C. 6.63%, D. 8.3%, E. 0.58%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000693_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000693_post_disaster.png",
+    "ground_truth": "2.87%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "2.22%",
+      "4.62%",
+      "6.53%",
+      "9.84%",
+      "2.87%"
+    ],
+    "options_str": "A. 2.22%, B. 4.62%, C. 6.53%, D. 9.84%, E. 2.87%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hawaii_wildfire_pre_657.png",
+    "post_image_path": "test_images\\hawaii_wildfire_post_657.png",
+    "ground_truth": "4.47%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.91%",
+      "4.38%",
+      "6.39%",
+      "9.54%",
+      "4.47%"
+    ],
+    "options_str": "A. 1.91%, B. 4.38%, C. 6.39%, D. 9.54%, E. 4.47%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000148_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000148_post_disaster.png",
+    "ground_truth": "5.03%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "0.7%",
+      "4.49%",
+      "6.02%",
+      "5.03%",
+      "8.4%"
+    ],
+    "options_str": "A. 0.7%, B. 4.49%, C. 6.02%, D. 5.03%, E. 8.4%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_306.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_306.png",
+    "ground_truth": "19.38%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "27.13%",
+      "23.26%",
+      "11.63%",
+      "19.38%",
+      "15.5%"
+    ],
+    "options_str": "A. 27.13%, B. 23.26%, C. 11.63%, D. 19.38%, E. 15.5%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_336.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_336.png",
+    "ground_truth": "11.09%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "15.53%",
+      "11.09%",
+      "13.31%",
+      "6.65%",
+      "8.87%"
+    ],
+    "options_str": "A. 15.53%, B. 11.09%, C. 13.31%, D. 6.65%, E. 8.87%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000087_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000087_post_disaster.png",
+    "ground_truth": "7.01%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.73%",
+      "4.47%",
+      "7.01%",
+      "7.22%",
+      "9.34%"
+    ],
+    "options_str": "A. 1.73%, B. 4.47%, C. 7.01%, D. 7.22%, E. 9.34%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\lower_puna_volcano_00000160_pre_disaster.png",
+    "post_image_path": "test_images\\lower_puna_volcano_00000160_post_disaster.png",
+    "ground_truth": "0.31%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "2.16%",
+      "3.67%",
+      "0.31%",
+      "6.58%",
+      "7.94%"
+    ],
+    "options_str": "A. 2.16%, B. 3.67%, C. 0.31%, D. 6.58%, E. 7.94%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_michael_00000441_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_michael_00000441_post_disaster.png",
+    "ground_truth": "7.11%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "1.91%",
+      "3.85%",
+      "5.55%",
+      "7.11%",
+      "8.46%"
+    ],
+    "options_str": "A. 1.91%, B. 3.85%, C. 5.55%, D. 7.11%, E. 8.46%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\portugal_wildfire_00000000_pre_disaster.png",
+    "post_image_path": "test_images\\portugal_wildfire_00000000_post_disaster.png",
+    "ground_truth": "2.55%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "2.12%",
+      "2.55%",
+      "2.53%",
+      "5.31%",
+      "9.99%"
+    ],
+    "options_str": "A. 2.12%, B. 2.55%, C. 2.53%, D. 5.31%, E. 9.99%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000025_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000025_post_disaster.png",
+    "ground_truth": "1.43%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "2.09%",
+      "4.85%",
+      "1.43%",
+      "6.17%",
+      "8.39%"
+    ],
+    "options_str": "A. 2.09%, B. 4.85%, C. 1.43%, D. 6.17%, E. 8.39%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000212_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000212_post_disaster.png",
+    "ground_truth": "9.9%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "9.9%",
+      "1.93%",
+      "4.63%",
+      "6.35%",
+      "7.98%"
+    ],
+    "options_str": "A. 9.9%, B. 1.93%, C. 4.63%, D. 6.35%, E. 7.98%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_harvey_00000301_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_harvey_00000301_post_disaster.png",
+    "ground_truth": "2.5%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "0.85%",
+      "3.91%",
+      "6.95%",
+      "2.5%",
+      "8.89%"
+    ],
+    "options_str": "A. 0.85%, B. 3.91%, C. 6.95%, D. 2.5%, E. 8.89%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake0_pre_205.png",
+    "post_image_path": "test_images\\turkey_earthquake0_post_205.png",
+    "ground_truth": "9.81%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "1.82%",
+      "3.47%",
+      "6.03%",
+      "9.81%",
+      "8.47%"
+    ],
+    "options_str": "A. 1.82%, B. 3.47%, C. 6.03%, D. 9.81%, E. 8.47%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\moore_tornado_00000030_pre_disaster.png",
+    "post_image_path": "test_images\\moore_tornado_00000030_post_disaster.png",
+    "ground_truth": "7.28%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.99%",
+      "7.28%",
+      "4.97%",
+      "5.54%",
+      "9.69%"
+    ],
+    "options_str": "A. 1.99%, B. 7.28%, C. 4.97%, D. 5.54%, E. 9.69%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000123_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000123_post_disaster.png",
+    "ground_truth": "10.73%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "15.02%",
+      "12.88%",
+      "10.73%",
+      "6.44%",
+      "8.58%"
+    ],
+    "options_str": "A. 15.02%, B. 12.88%, C. 10.73%, D. 6.44%, E. 8.58%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_78.png",
+    "post_image_path": "test_images\\libya_flood_sar_post_78.png",
+    "ground_truth": "4.54%",
+    "post_image_type": "SAR",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.44%",
+      "4.54%",
+      "4.71%",
+      "5.56%",
+      "9.39%"
+    ],
+    "options_str": "A. 1.44%, B. 4.54%, C. 4.71%, D. 5.56%, E. 9.39%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\ian_hurricane_pre_715.png",
+    "post_image_path": "test_images\\ian_hurricane_post_715.png",
+    "ground_truth": "9.8%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "9.8%",
+      "1.57%",
+      "2.51%",
+      "7.31%",
+      "7.7%"
+    ],
+    "options_str": "A. 9.8%, B. 1.57%, C. 2.51%, D. 7.31%, E. 7.7%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\joplin_tornado_00000083_pre_disaster.png",
+    "post_image_path": "test_images\\joplin_tornado_00000083_post_disaster.png",
+    "ground_truth": "17.27%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "24.18%",
+      "20.72%",
+      "10.36%",
+      "17.27%",
+      "13.82%"
+    ],
+    "options_str": "A. 24.18%, B. 20.72%, C. 10.36%, D. 17.27%, E. 13.82%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\sunda_tsunami_00000130_pre_disaster.png",
+    "post_image_path": "test_images\\sunda_tsunami_00000130_post_disaster.png",
+    "ground_truth": "0.92%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.18%",
+      "0.92%",
+      "3.52%",
+      "6.51%",
+      "8.55%"
+    ],
+    "options_str": "A. 1.18%, B. 0.92%, C. 3.52%, D. 6.51%, E. 8.55%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hawaii_wildfire_pre_647.png",
+    "post_image_path": "test_images\\hawaii_wildfire_sar_post_647.png",
+    "ground_truth": "9.01%",
+    "post_image_type": "SAR",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "1.52%",
+      "3.31%",
+      "7.43%",
+      "9.01%",
+      "9.43%"
+    ],
+    "options_str": "A. 1.52%, B. 3.31%, C. 7.43%, D. 9.01%, E. 9.43%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake4_pre_284.png",
+    "post_image_path": "test_images\\turkey_earthquake4_post_284.png",
+    "ground_truth": "8.52%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "8.52%",
+      "1.0%",
+      "2.95%",
+      "6.65%",
+      "8.75%"
+    ],
+    "options_str": "A. 8.52%, B. 1.0%, C. 2.95%, D. 6.65%, E. 8.75%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000530_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000530_post_disaster.png",
+    "ground_truth": "19.97%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "19.97%",
+      "27.96%",
+      "23.96%",
+      "11.98%",
+      "15.98%"
+    ],
+    "options_str": "A. 19.97%, B. 27.96%, C. 23.96%, D. 11.98%, E. 15.98%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000182_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000182_post_disaster.png",
+    "ground_truth": "6.04%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.78%",
+      "6.04%",
+      "4.37%",
+      "6.76%",
+      "8.25%"
+    ],
+    "options_str": "A. 0.78%, B. 6.04%, C. 4.37%, D. 6.76%, E. 8.25%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_69.png",
+    "post_image_path": "test_images\\libya_flood_post_69.png",
+    "ground_truth": "2.15%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.81%",
+      "2.15%",
+      "4.28%",
+      "6.06%",
+      "8.54%"
+    ],
+    "options_str": "A. 0.81%, B. 2.15%, C. 4.28%, D. 6.06%, E. 8.54%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\hurricane_michael_00000212_pre_disaster.png",
+    "post_image_path": "test_images\\hurricane_michael_00000212_post_disaster.png",
+    "ground_truth": "8.59%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "0.7%",
+      "4.09%",
+      "6.62%",
+      "8.99%",
+      "8.59%"
+    ],
+    "options_str": "A. 0.7%, B. 4.09%, C. 6.62%, D. 8.99%, E. 8.59%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000608_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000608_post_disaster.png",
+    "ground_truth": "15.7%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "21.98%",
+      "18.84%",
+      "9.42%",
+      "15.7%",
+      "12.56%"
+    ],
+    "options_str": "A. 21.98%, B. 18.84%, C. 9.42%, D. 15.7%, E. 12.56%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00000189_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00000189_post_disaster.png",
+    "ground_truth": "1.57%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.9%",
+      "3.35%",
+      "1.57%",
+      "5.66%",
+      "8.42%"
+    ],
+    "options_str": "A. 1.9%, B. 3.35%, C. 1.57%, D. 5.66%, E. 8.42%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake7_pre_597.png",
+    "post_image_path": "test_images\\turkey_earthquake7_post_597.png",
+    "ground_truth": "1.55%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "0.48%",
+      "1.55%",
+      "2.88%",
+      "5.13%",
+      "8.08%"
+    ],
+    "options_str": "A. 0.48%, B. 1.55%, C. 2.88%, D. 5.13%, E. 8.08%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000001_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000001_post_disaster.png",
+    "ground_truth": "0.12%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "0.12%",
+      "2.37%",
+      "4.42%",
+      "7.39%",
+      "7.68%"
+    ],
+    "options_str": "A. 0.12%, B. 2.37%, C. 4.42%, D. 7.39%, E. 7.68%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\guatemala_volcano_00000010_pre_disaster.png",
+    "post_image_path": "test_images\\guatemala_volcano_00000010_post_disaster.png",
+    "ground_truth": "0.16%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "C",
+    "options_list": [
+      "0.53%",
+      "4.33%",
+      "0.16%",
+      "5.87%",
+      "8.02%"
+    ],
+    "options_str": "A. 0.53%, B. 4.33%, C. 0.16%, D. 5.87%, E. 8.02%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake1_pre_232.png",
+    "post_image_path": "test_images\\turkey_earthquake1_sar_post_232.png",
+    "ground_truth": "3.97%",
+    "post_image_type": "SAR",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "1.02%",
+      "3.71%",
+      "5.77%",
+      "8.71%",
+      "3.97%"
+    ],
+    "options_str": "A. 1.02%, B. 3.71%, C. 5.77%, D. 8.71%, E. 3.97%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_113.png",
+    "post_image_path": "test_images\\libya_flood_post_113.png",
+    "ground_truth": "21.03%",
+    "post_image_type": "Optical",
+    "prompts": "What proportion of the total image area consists of intact road surfaces?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "29.44%",
+      "25.24%",
+      "12.62%",
+      "16.82%",
+      "21.03%"
+    ],
+    "options_str": "A. 29.44%, B. 25.24%, C. 12.62%, D. 16.82%, E. 21.03%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\socal_fire_00000756_pre_disaster.png",
+    "post_image_path": "test_images\\socal_fire_00000756_post_disaster.png",
+    "ground_truth": "7.79%",
+    "post_image_type": "Optical",
+    "prompts": "Determine the ratio between intact roads and the total image area.",
+    "ground_truth_option": "D",
+    "options_list": [
+      "2.37%",
+      "2.83%",
+      "6.57%",
+      "7.79%",
+      "8.94%"
+    ],
+    "options_str": "A. 2.37%, B. 2.83%, C. 6.57%, D. 7.79%, E. 8.94%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\turkey_earthquake5_pre_350.png",
+    "post_image_path": "test_images\\turkey_earthquake5_post_350.png",
+    "ground_truth": "14.19%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "19.87%",
+      "17.03%",
+      "8.51%",
+      "14.19%",
+      "11.35%"
+    ],
+    "options_str": "A. 19.87%, B. 17.03%, C. 8.51%, D. 14.19%, E. 11.35%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\midwest_flooding_00000314_pre_disaster.png",
+    "post_image_path": "test_images\\midwest_flooding_00000314_post_disaster.png",
+    "ground_truth": "6.56%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "E",
+    "options_list": [
+      "0.38%",
+      "2.87%",
+      "6.45%",
+      "9.0%",
+      "6.56%"
+    ],
+    "options_str": "A. 0.38%, B. 2.87%, C. 6.45%, D. 9.0%, E. 6.56%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\palu_tsunami_00000002_pre_disaster.png",
+    "post_image_path": "test_images\\palu_tsunami_00000002_post_disaster.png",
+    "ground_truth": "5.34%",
+    "post_image_type": "Optical",
+    "prompts": "What percentage of the entire image is occupied by undamaged roads?",
+    "ground_truth_option": "C",
+    "options_list": [
+      "1.18%",
+      "4.15%",
+      "5.34%",
+      "6.4%",
+      "7.68%"
+    ],
+    "options_str": "A. 1.18%, B. 4.15%, C. 5.34%, D. 6.4%, E. 7.68%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\pinery_bushfire_00001720_pre_disaster.png",
+    "post_image_path": "test_images\\pinery_bushfire_00001720_post_disaster.png",
+    "ground_truth": "2.36%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "A",
+    "options_list": [
+      "2.36%",
+      "0.95%",
+      "3.68%",
+      "6.78%",
+      "9.52%"
+    ],
+    "options_str": "A. 2.36%, B. 0.95%, C. 3.68%, D. 6.78%, E. 9.52%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\libya_flood_pre_119.png",
+    "post_image_path": "test_images\\libya_flood_post_119.png",
+    "ground_truth": "23.01%",
+    "post_image_type": "Optical",
+    "prompts": "What is the ratio of undamaged road area to the complete image area?",
+    "ground_truth_option": "D",
+    "options_list": [
+      "32.21%",
+      "27.61%",
+      "13.81%",
+      "23.01%",
+      "18.41%"
+    ],
+    "options_str": "A. 32.21%, B. 27.61%, C. 13.81%, D. 23.01%, E. 18.41%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  },
+  {
+    "pre_image_path": "test_images\\mexico_earthquake_00000035_pre_disaster.png",
+    "post_image_path": "test_images\\mexico_earthquake_00000035_post_disaster.png",
+    "ground_truth": "6.98%",
+    "post_image_type": "Optical",
+    "prompts": "What is the area ratio of the intact roads to the entire image?",
+    "ground_truth_option": "B",
+    "options_list": [
+      "1.77%",
+      "6.98%",
+      "2.83%",
+      "6.22%",
+      "7.68%"
+    ],
+    "options_str": "A. 1.77%, B. 6.98%, C. 2.83%, D. 6.22%, E. 7.68%.",
+    "task": "Road Damage Counting",
+    "cls_description": "intact road counting."
+  }
+]
