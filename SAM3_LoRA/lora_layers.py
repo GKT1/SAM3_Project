@@ -539,3 +539,53 @@ def load_lora_weights(model: nn.Module, load_path: str):
     lora_state_dict = torch.load(load_path)
     model.load_state_dict(lora_state_dict, strict=False)
     print(f"Loaded LoRA weights from {load_path}")
+
+
+def save_checkpoint(model: nn.Module, optimizer, scheduler, epoch: int, save_path: str):
+    """
+    Save full training checkpoint including optimizer and scheduler state.
+    """
+    lora_state_dict = {}
+    for name, module in model.named_modules():
+        if isinstance(module, LoRALayer):
+            lora_state_dict[f"{name}.lora_A"] = module.lora_A
+            lora_state_dict[f"{name}.lora_B"] = module.lora_B
+
+    checkpoint = {
+        'model_state_dict': lora_state_dict,
+        'optimizer_state_dict': optimizer.state_dict() if optimizer else None,
+        'scheduler_state_dict': scheduler.state_dict() if scheduler else None,
+        'epoch': epoch,
+    }
+    torch.save(checkpoint, save_path)
+    print(f"Saved checkpoint to {save_path}")
+
+
+def load_checkpoint(model: nn.Module, optimizer, scheduler, load_path: str):
+    """
+    Load full training checkpoint.
+    Returns the epoch to resume from.
+    """
+    print(f"Loading checkpoint from {load_path}...")
+    checkpoint = torch.load(load_path, map_location='cpu')
+    
+    # Load model weights
+    if 'model_state_dict' in checkpoint:
+        model.load_state_dict(checkpoint['model_state_dict'], strict=False)
+    else:
+        # Fallback for old style checkpoints (only weights)
+        model.load_state_dict(checkpoint, strict=False)
+    
+    # Load optimizer state
+    if optimizer and 'optimizer_state_dict' in checkpoint and checkpoint['optimizer_state_dict']:
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        print("Loaded optimizer state")
+    
+    # Load scheduler state
+    if scheduler and 'scheduler_state_dict' in checkpoint and checkpoint['scheduler_state_dict']:
+        scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
+        print("Loaded scheduler state")
+        
+    start_epoch = checkpoint.get('epoch', 0)
+    print(f"Resuming from epoch {start_epoch}")
+    return start_epoch

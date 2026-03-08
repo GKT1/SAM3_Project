@@ -49,7 +49,7 @@ from sam3.train.matcher import BinaryHungarianMatcherV2, BinaryOneToManyMatcher
 from sam3.train.data.collator import collate_fn_api
 from sam3.train.data.sam3_image_dataset import Datapoint, Image, Object, FindQueryLoaded, InferenceMetadata
 from sam3.model.box_ops import box_xywh_to_xyxy
-from lora_layers import LoRAConfig, apply_lora_to_model, save_lora_weights, count_parameters
+from lora_layers import LoRAConfig, apply_lora_to_model, save_lora_weights, count_parameters, save_checkpoint, load_checkpoint
 
 from torchvision.transforms import v2
 import pycocotools.mask as mask_utils  # Required for RLE mask decoding in COCO dataset
@@ -762,12 +762,13 @@ def create_coco_gt_from_dataset_original_res(dataset, image_ids=None, debug=Fals
 
 
 class SAM3TrainerNative:
-    def __init__(self, config_path, multi_gpu=False, max_train_samples=None, eval_mqa=False):
+    def __init__(self, config_path, multi_gpu=False, max_train_samples=None, eval_mqa=False, resume_from=None):
         with open(config_path, "r") as f:
             self.config = yaml.safe_load(f)
 
         self.max_train_samples = max_train_samples
         self.eval_mqa = eval_mqa
+        self.resume_from = resume_from
 
         # Multi-GPU setup
         self.multi_gpu = multi_gpu
@@ -808,6 +809,28 @@ class SAM3TrainerNative:
             apply_to_mask_decoder=lora_cfg["apply_to_mask_decoder"],
         )
         self.model = apply_lora_to_model(self.model, lora_config)
+
+        # Handle resume
+        self.start_epoch = 0
+        if self.resume_from and os.path.exists(self.resume_from):
+            print_rank0(f"Resuming LoRA weights from {self.resume_from}...")
+            # Using load_lora_weights as we only have the weights, not a full checkpoint with optimizer/scheduler
+            from lora_layers import load_lora_weights
+            load_lora_weights(self.model, self.resume_from)
+            
+            # Try to load start epoch from metadata (last_epoch.json for last, best_epoch.json for best)
+            # If the filename is 'last_lora_weights.pt', we look for 'last_epoch.json'
+            # If the filename is 'best_lora_weights.pt', we look for 'best_epoch.json'
+            checkpoint_name = os.path.basename(self.resume_from).replace("_lora_weights.pt", "")
+            meta_path = Path(self.resume_from).parent / f"{checkpoint_name}_epoch.json"
+            
+            if meta_path.exists():
+                with open(meta_path, "r") as f:
+                    meta = json.load(f)
+                    self.start_epoch = meta.get("epoch", 0)
+                    print_rank0(f"Found metadata ({meta_path.name}): starting from overall epoch {self.start_epoch}")
+        elif self.resume_from:
+            print_rank0(f"Warning: Resume checkpoint not found at {self.resume_from}")
 
         stats = count_parameters(self.model)
         print_rank0(f"Trainable params: {stats['trainable_parameters']:,} ({stats['trainable_percentage']:.2f}%)")
@@ -1013,7 +1036,9 @@ class SAM3TrainerNative:
         out_dir = Path(self.config["output"]["output_dir"])
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        for epoch in range(epochs):
+        for epoch_idx in range(epochs):
+            epoch = self.start_epoch + epoch_idx
+            
             # Set epoch for distributed sampler (required for proper shuffling)
             if self.multi_gpu and train_sampler is not None:
                 train_sampler.set_epoch(epoch)
@@ -1135,45 +1160,89 @@ class SAM3TrainerNative:
                 # MQA Evaluation
                 if self.eval_mqa and is_main_process():
                     try:
-                        print_rank0("\nRunning MQA Evaluation...")
                         import sys
-                        sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-                        from sam3.mqa_evaluator import evaluate_mqa_on_dataset
+                        # Use the explicit symbolic link to avoid module name collision
+                        sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+                        from sam3_core.mqa_evaluator import evaluate_mqa_on_dataset
                         
-                        mqa_results = evaluate_mqa_on_dataset(
-                            model=self.model.module if self.multi_gpu else self.model,
-                            device=self.device.type,
-                            scenarios_path="../test_data/100_images_test/common_samples/sample_RDC.json",
-                            images_dir="../test_data/100_images_test/test_images",
-                            threshold=0.25 # Optimal threshold found via testing
-                        )
-                        print_rank0(f"MQA Evaluation - Accuracy: {mqa_results['accuracy']:.2%} | MAE: {mqa_results['mae']:.3f}%")
+                        mqa_categories = {
+                            "Road": "../test_data/100_images_test/common_samples/sample_RDC.json",
+                            "Building": "../test_data/100_images_test/common_samples/sample_BDC.json"
+                        }
+                        
+                        epoch_mqa_results = {"epoch": epoch + 1}
+                        all_acc = []
+                        all_mae = []
+                        
+                        print_rank0(f"\nRunning MQA Evaluation (Road & Building)...")
+                        for cat_name, scenario_path in mqa_categories.items():
+                            if not os.path.exists(scenario_path):
+                                print_rank0(f"  Warning: {cat_name} scenarios not found at {scenario_path}")
+                                continue
+                                
+                            res = evaluate_mqa_on_dataset(
+                                model=self.model.module if self.multi_gpu else self.model,
+                                device=self.device.type,
+                                scenarios_path=scenario_path,
+                                images_dir="../test_data/100_images_test/test_images",
+                                threshold=0.25 # Optimal threshold found via testing
+                            )
+                            print_rank0(f"  {cat_name} MQA - Accuracy: {res['accuracy']:.2%} | MAE: {res['mae']:.3f}%")
+                            
+                            epoch_mqa_results[f"{cat_name.lower()}_accuracy"] = res['accuracy']
+                            epoch_mqa_results[f"{cat_name.lower()}_mae"] = res['mae']
+                            all_acc.append(res['accuracy'])
+                            all_mae.append(res['mae'])
+                        
+                        if all_acc:
+                            avg_acc = sum(all_acc) / len(all_acc)
+                            avg_mae = sum(all_mae) / len(all_mae)
+                            epoch_mqa_results["overall_accuracy"] = avg_acc
+                            epoch_mqa_results["overall_mae"] = avg_mae
+                            print_rank0(f"  OVERALL MQA - Accuracy: {avg_acc:.2%} | MAE: {avg_mae:.3f}%")
                         
                         # Log MQA stats
                         with open(out_dir / "mqa_stats.json", "a") as f:
-                            f.write(json.dumps({
-                                "epoch": epoch + 1,
-                                "accuracy": mqa_results['accuracy'],
-                                "mae": mqa_results['mae']
-                            }) + "\n")
+                            f.write(json.dumps(epoch_mqa_results) + "\n")
                     except Exception as e:
                         print_rank0(f"MQA Evaluation failed: {e}")
 
                 # Save models based on validation loss (only on rank 0)
                 if is_main_process():
+                    # Calculate overall epoch
+                    overall_epoch = epoch + 1
+
                     # Get underlying model from DDP wrapper
                     model_to_save = self.model.module if self.multi_gpu else self.model
+                    
+                    # Save full checkpoint with epoch info
+                    checkpoint_data = {
+                        "epoch": overall_epoch,
+                        "val_loss": avg_val_loss,
+                        "train_loss": avg_train_loss
+                    }
+                    
+                    # 1. Save last weights (overwrite each epoch)
                     save_lora_weights(model_to_save, str(out_dir / "last_lora_weights.pt"))
+                    with open(out_dir / "last_epoch.json", "w") as f:
+                        json.dump(checkpoint_data, f)
+                    
+                    # 2. Save individual epoch weights (persistent history)
+                    save_lora_weights(model_to_save, str(out_dir / f"lora_weights_epoch_{overall_epoch}.pt"))
+                    with open(out_dir / f"epoch_{overall_epoch}.json", "w") as f:
+                        json.dump(checkpoint_data, f)
 
                     if avg_val_loss < best_val_loss:
                         best_val_loss = avg_val_loss
                         save_lora_weights(model_to_save, str(out_dir / "best_lora_weights.pt"))
                         print(f"✓ New best model saved (val_loss: {avg_val_loss:.6f})")
+                        with open(out_dir / "best_epoch.json", "w") as f:
+                            json.dump(checkpoint_data, f)
 
                     # Log to file
                     with open(out_dir / "val_stats.json", "a") as f:
                         f.write(json.dumps({
-                            "epoch": epoch + 1,
+                            "epoch": overall_epoch,
                             "train_loss": avg_train_loss,
                             "val_loss": avg_val_loss
                         }) + "\n")
@@ -1343,5 +1412,5 @@ Examples:
             os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device[0])
             print(f"Using single GPU: {args.device[0]}")
 
-        trainer = SAM3TrainerNative(args.config, multi_gpu=multi_gpu, max_train_samples=args.max_train_samples, eval_mqa=args.eval_mqa)
+        trainer = SAM3TrainerNative(args.config, multi_gpu=multi_gpu, max_train_samples=args.max_train_samples, eval_mqa=args.eval_mqa, resume_from="outputs/sam3_lora_full/last_lora_weights.pt")
         trainer.train()

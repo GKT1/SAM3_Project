@@ -206,7 +206,7 @@ class COCOSegmentDataset(Dataset):
                     is_exhaustive=True,
                     query_processing_order=0,
                     inference_metadata=InferenceMetadata(
-                        coco_image_id=img_id,
+                        coco_image_id=idx,  # Use idx instead of img_id for consistent indexing
                         original_image_id=img_id,
                         original_category_id=0,
                         original_size=(orig_h, orig_w),
@@ -224,7 +224,7 @@ class COCOSegmentDataset(Dataset):
                 is_exhaustive=True,
                 query_processing_order=0,
                 inference_metadata=InferenceMetadata(
-                    coco_image_id=img_id,
+                    coco_image_id=idx,  # Use idx instead of img_id for consistent indexing
                     original_image_id=img_id,
                     original_category_id=0,
                     original_size=(orig_h, orig_w),
@@ -976,7 +976,8 @@ def validate(config_path, weights_path, val_data_dir, num_samples=None,
                 batch_size_actual = final_outputs['pred_logits'].shape[0]
 
                 for i in range(batch_size_actual):
-                    img_id = batch_idx * batch_size + i
+                    # Get the correct global image index from the query's metadata
+                    img_id = input_batch.find_metadatas[-1].coco_image_id[i]
                     all_image_ids.append(img_id)
                     all_predictions.append({
                         'pred_logits': final_outputs['pred_logits'][i].detach().cpu(),

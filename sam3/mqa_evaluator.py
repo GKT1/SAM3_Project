@@ -68,8 +68,13 @@ def evaluate_mqa_on_dataset(model, device, scenarios_path, images_dir, threshold
         if not os.path.exists(post_img):
             continue
             
-        gt_str = scenario["ground_truth"].replace('%', '')
-        gt_val = float(gt_str)
+        # Robust ground truth parsing (handle int, float, or string like "25%")
+        gt_raw = scenario["ground_truth"]
+        if isinstance(gt_raw, (int, float)):
+            gt_val = float(gt_raw)
+        else:
+            gt_val = float(str(gt_raw).replace('%', ''))
+            
         gt_option = scenario["ground_truth_option"]
         
         # Determine prompt dynamically based on task
