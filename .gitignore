@@ -1,7 +1,7 @@
 # Ignore dataset and outputs
 # disaster_subset_coco/
 # test_data/ is NOT ignored so your 100 MQA images push successfully
-outputs/
+#outputs/
 logs/
 *.log
 
