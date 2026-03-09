@@ -3,7 +3,7 @@
 # test_data/ is NOT ignored so your 100 MQA images push successfully
 #outputs/
 logs/
-*.log
+#*.log
 
 # Ignore python caches
 __pycache__/

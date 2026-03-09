@@ -1,0 +1,7 @@
+usage: train_sam3_lora_native.py [-h] [--config CONFIG]
+                                 [--device DEVICE [DEVICE ...]]
+                                 [--master_port MASTER_PORT]
+                                 [--local_rank LOCAL_RANK]
+                                 [--max_train_samples MAX_TRAIN_SAMPLES]
+                                 [--eval_mqa]
+train_sam3_lora_native.py: error: unrecognized arguments: --resume outputs/sam3_lora_full/last_lora_weights.pt

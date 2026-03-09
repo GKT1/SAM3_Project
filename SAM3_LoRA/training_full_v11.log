@@ -1,0 +1,41 @@
+Using single GPU: 0
+Building SAM3 model...
+Applying LoRA...
+Replaced 61 nn.MultiheadAttention modules with MultiheadAttentionLoRA
+Applied LoRA to 458 modules:
+  - backbone.vision_backbone.trunk.blocks.0.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.0.attn.proj
+  - backbone.vision_backbone.trunk.blocks.0.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.0.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.1.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.1.attn.proj
+  - backbone.vision_backbone.trunk.blocks.1.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.1.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.2.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.2.attn.proj
+  - backbone.vision_backbone.trunk.blocks.2.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.2.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.3.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.3.attn.proj
+  - backbone.vision_backbone.trunk.blocks.3.mlp.fc1
+  ... and 443 more
+Resuming LoRA weights from outputs/sam3_lora_full/last_lora_weights.pt...
+Loaded LoRA weights from outputs/sam3_lora_full/last_lora_weights.pt
+Found metadata (last_epoch.json): starting from overall epoch 10
+Trainable params: 36,995,328 (4.22%)
+
+Loading training data from ../disaster_subset_coco...
+Loaded COCO dataset: train split
+  Images: 680
+  Annotations: 1433
+  Categories: {1: 'damaged building', 2: 'intact building', 3: 'road damage', 4: 'intact road'}
+
+Loading validation data from ../disaster_subset_coco...
+Loaded COCO dataset: valid split
+  Images: 164
+  Annotations: 343
+  Categories: {1: 'damaged building', 2: 'intact building', 3: 'road damage', 4: 'intact road'}
+Found validation data: 164 images
+Starting training for 100 epochs...
+Training samples: 680, Validation samples: 164
+Epoch 11:   0%|          | 0/680 [00:00<?, ?it/s]Epoch 11:   0%|          | 0/680 [00:05<?, ?it/s, loss=50.8]Epoch 11:   0%|          | 1/680 [00:05<1:01:49,  5.46s/it, loss=50.8]Epoch 11:   0%|          | 1/680 [00:09<1:01:49,  5.46s/it, loss=61.2]Epoch 11:   0%|          | 2/680 [00:09<49:44,  4.40s/it, loss=61.2]  Epoch 11:   0%|          | 2/680 [00:11<49:44,  4.40s/it, loss=94.6]Epoch 11:   0%|          | 3/680 [00:11<38:57,  3.45s/it, loss=94.6]Epoch 11:   0%|          | 3/680 [00:13<38:57,  3.45s/it, loss=108] Epoch 11:   1%|          | 4/680 [00:13<33:51,  3.01s/it, loss=108]Epoch 11:   1%|          | 4/680 [00:16<33:51,  3.01s/it, loss=160]Epoch 11:   1%|          | 5/680 [00:16<31:02,  2.76s/it, loss=160]Epoch 11:   1%|          | 5/680 [00:18<31:02,  2.76s/it, loss=43.6]Epoch 11:   1%|          | 6/680 [00:18<27:46,  2.47s/it, loss=43.6]Epoch 11:   1%|          | 6/680 [00:20<27:46,  2.47s/it, loss=78.1]Epoch 11:   1%|          | 7/680 [00:20<28:45,  2.56s/it, loss=78.1]Epoch 11:   1%|          | 7/680 [00:22<28:45,  2.56s/it, loss=69.5]Epoch 11:   1%|          | 8/680 [00:22<26:21,  2.35s/it, loss=69.5]Epoch 11:   1%|          | 8/680 [00:24<26:21,  2.35s/it, loss=0.000296]Epoch 11:   1%|▏         | 9/680 [00:24<25:12,  2.25s/it, loss=0.000296]Epoch 11:   1%|▏         | 9/680 [00:27<25:12,  2.25s/it, loss=44.2]    Epoch 11:   1%|▏         | 10/680 [00:27<26:52,  2.41s/it, loss=44.2]Epoch 11:   1%|▏         | 10/680 [00:29<26:52,  2.41s/it, loss=0.000124]Epoch 11:   2%|▏         | 11/680 [00:29<25:02,  2.25s/it, loss=0.000124]Epoch 11:   2%|▏         | 11/680 [00:31<25:02,  2.25s/it, loss=147]     Epoch 11:   2%|▏         | 12/680 [00:31<25:15,  2.27s/it, loss=147]Epoch 11:   2%|▏         | 12/680 [00:33<25:15,  2.27s/it, loss=47.2]Epoch 11:   2%|▏         | 13/680 [00:33<25:24,  2.29s/it, loss=47.2]Epoch 11:   2%|▏         | 13/680 [00:35<25:24,  2.29s/it, loss=16.3]Epoch 11:   2%|▏         | 14/680 [00:35<24:05,  2.17s/it, loss=16.3]Epoch 11:   2%|▏         | 14/680 [00:38<24:05,  2.17s/it, loss=44.7]Epoch 11:   2%|▏         | 15/680 [00:38<25:10,  2.27s/it, loss=44.7]Epoch 11:   2%|▏         | 15/680 [00:40<25:10,  2.27s/it, loss=32.3]Epoch 11:   2%|▏         | 16/680 [00:40<25:18,  2.29s/it, loss=32.3]Epoch 11:   2%|▏         | 16/680 [00:43<25:18,  2.29s/it, loss=45.4]Epoch 11:   2%|▎         | 17/680 [00:43<25:23,  2.30s/it, loss=45.4]Epoch 11:   2%|▎         | 17/680 [00:45<25:23,  2.30s/it, loss=53.2]Epoch 11:   3%|▎         | 18/680 [00:45<25:27,  2.31s/it, loss=53.2]Epoch 11:   3%|▎         | 18/680 [00:48<25:27,  2.31s/it, loss=70]  Epoch 11:   3%|▎         | 19/680 [00:48<26:54,  2.44s/it, loss=70]Epoch 11:   3%|▎         | 19/680 [00:50<26:54,  2.44s/it, loss=92.6]Epoch 11:   3%|▎         | 20/680 [00:50<25:06,  2.28s/it, loss=92.6]Epoch 11:   3%|▎         | 20/680 [00:52<25:06,  2.28s/it, loss=82.8]Epoch 11:   3%|▎         | 21/680 [00:52<26:36,  2.42s/it, loss=82.8]Epoch 11:   3%|▎         | 21/680 [00:55<26:36,  2.42s/it, loss=107] Epoch 11:   3%|▎         | 22/680 [00:55<27:39,  2.52s/it, loss=107]Epoch 11:   3%|▎         | 22/680 [00:57<27:39,  2.52s/it, loss=40.2]Epoch 11:   3%|▎         | 23/680 [00:57<27:05,  2.47s/it, loss=40.2]Epoch 11:   3%|▎         | 23/680 [01:00<27:05,  2.47s/it, loss=52]  Epoch 11:   4%|▎         | 24/680 [01:00<26:33,  2.43s/it, loss=52]Epoch 11:   4%|▎         | 24/680 [01:02<26:33,  2.43s/it, loss=50.5]Epoch 11:   4%|▎         | 25/680 [01:02<26:10,  2.40s/it, loss=50.5]Epoch 11:   4%|▎         | 25/680 [01:04<26:10,  2.40s/it, loss=34.8]Epoch 11:   4%|▍         | 26/680 [01:04<25:52,  2.37s/it, loss=34.8]Epoch 11:   4%|▍         | 26/680 [01:07<25:52,  2.37s/it, loss=29.2]Epoch 11:   4%|▍         | 27/680 [01:07<25:40,  2.36s/it, loss=29.2]Epoch 11:   4%|▍         | 27/680 [01:09<25:40,  2.36s/it, loss=126] Epoch 11:   4%|▍         | 28/680 [01:09<24:09,  2.22s/it, loss=126]Epoch 11:   4%|▍         | 28/680 [01:11<24:09,  2.22s/it, loss=53.9]Epoch 11:   4%|▍         | 29/680 [01:11<24:28,  2.26s/it, loss=53.9]Epoch 11:   4%|▍         | 29/680 [01:13<24:28,  2.26s/it, loss=93.5]Epoch 11:   4%|▍         | 30/680 [01:13<23:17,  2.15s/it, loss=93.5]Epoch 11:   4%|▍         | 30/680 [01:15<23:17,  2.15s/it, loss=0.000421]Epoch 11:   5%|▍         | 31/680 [01:15<22:24,  2.07s/it, loss=0.000421]

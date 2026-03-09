@@ -1,0 +1,30 @@
+Using single GPU: 0
+Building SAM3 model...
+Applying LoRA...
+Replaced 61 nn.MultiheadAttention modules with MultiheadAttentionLoRA
+Applied LoRA to 458 modules:
+  - backbone.vision_backbone.trunk.blocks.0.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.0.attn.proj
+  - backbone.vision_backbone.trunk.blocks.0.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.0.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.1.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.1.attn.proj
+  - backbone.vision_backbone.trunk.blocks.1.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.1.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.2.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.2.attn.proj
+  - backbone.vision_backbone.trunk.blocks.2.mlp.fc1
+  - backbone.vision_backbone.trunk.blocks.2.mlp.fc2
+  - backbone.vision_backbone.trunk.blocks.3.attn.qkv
+  - backbone.vision_backbone.trunk.blocks.3.attn.proj
+  - backbone.vision_backbone.trunk.blocks.3.mlp.fc1
+  ... and 443 more
+Resuming LoRA weights from outputs/sam3_lora_full/best_lora_weights.pt...
+Traceback (most recent call last):
+  File "/workspace/SAM3_Project/SAM3_LoRA/train_sam3_lora_native.py", line 1356, in <module>
+    trainer = SAM3TrainerNative(args.config, multi_gpu=multi_gpu, max_train_samples=args.max_train_samples, eval_mqa=args.eval_mqa, resume_from="outputs/sam3_lora_full/best_lora_weights.pt")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/SAM3_Project/SAM3_LoRA/train_sam3_lora_native.py", line 816, in __init__
+    self.model = load_checkpoint(self.model, self.resume_from)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: load_checkpoint() missing 2 required positional arguments: 'scheduler' and 'load_path'
