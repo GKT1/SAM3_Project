@@ -43,32 +43,32 @@ ENV/
 
 # Training outputs
 outputs/
-experiments/
-logs/
-checkpoints/
-dumps/
+# experiments/
+# logs/
+# checkpoints/
+# dumps/
 
 # Data
-/data/
-datasets/
-*.jpg
-*.jpeg
-*.png
-*.json
-!*_annotations.coco.json
+# /data/
+# datasets/
+# *.jpg
+# *.jpeg
+# *.png
+# *.json
+# !*_annotations.coco.json
 
 # Models
-*.pth
-*.pt
-*.ckpt
-*.safetensors
+# *.pth
+# *.pt
+# *.ckpt
+# *.safetensors
 
 # System
 .DS_Store
 Thumbs.db
 
 # Temporary files
-*.log
-*.tmp
-*.temp
-.hf_home/
+# *.log
+# *.tmp
+# *.temp
+# .hf_home/

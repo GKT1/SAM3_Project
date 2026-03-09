@@ -241,7 +241,7 @@ class COCOSegmentDataset(Dataset):
         )
 
 
-def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.15):
+def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.5):
     """
     Merge overlapping masks that likely represent the same object (e.g., crack segments).
 
@@ -252,7 +252,7 @@ def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.15):
         binary_masks: Binary masks [N, H, W]
         scores: Confidence scores [N]
         boxes: Bounding boxes [N, 4]
-        iou_threshold: IoU threshold for merging (default: 0.15, lower = more aggressive)
+        iou_threshold: IoU threshold for merging (default: 0.5, lower = more aggressive)
 
     Returns:
         Tuple of (merged_masks, merged_scores, merged_boxes)
@@ -312,7 +312,7 @@ def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.15):
     return merged_masks, merged_scores, merged_boxes
 
 
-def apply_sam3_nms(pred_logits, pred_masks, pred_boxes, prob_threshold=0.3, nms_iou_threshold=0.7, max_detections=100):
+def apply_sam3_nms(pred_logits, pred_masks, pred_boxes, prob_threshold=0.3, nms_iou_threshold=0.8, max_detections=100):
     """
     Apply SAM3's standard NMS pipeline to filter predictions.
 
@@ -363,8 +363,8 @@ def apply_sam3_nms(pred_logits, pred_masks, pred_boxes, prob_threshold=0.3, nms_
 
 
 def convert_predictions_to_coco_format(predictions_list, image_ids, resolution=288,
-                                       prob_threshold=0.3, nms_iou_threshold=0.7, max_detections=100,
-                                       merge_cracks=False, merge_iou_threshold=0.15):
+                                       prob_threshold=0.3, nms_iou_threshold=0.8, max_detections=100,
+                                       merge_cracks=False, merge_iou_threshold=0.5):
     """
     Convert model predictions to COCO format using SAM3's NMS pipeline.
 
@@ -1144,8 +1144,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--nms-iou",
         type=float,
-        default=0.7,
-        help="NMS IoU threshold (default: 0.7)"
+        default=0.8,
+        help="NMS IoU threshold (default: 0.8)"
     )
     parser.add_argument(
         "--merge",
@@ -1155,8 +1155,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--merge-iou",
         type=float,
-        default=0.15,
-        help="IoU threshold for merging overlapping predictions (default: 0.15, lower = more aggressive)"
+        default=0.5,
+        help="IoU threshold for merging overlapping predictions (default: 0.5, lower = more aggressive)"
     )
     args = parser.parse_args()
 

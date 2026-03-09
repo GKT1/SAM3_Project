@@ -309,7 +309,7 @@ class COCOSegmentDataset(Dataset):
         )
 
 
-def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.3):
+def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.5):
     """
     Merge overlapping masks that likely represent the same object.
 
@@ -317,7 +317,7 @@ def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.3):
         binary_masks: Binary masks [N, H, W]
         scores: Confidence scores [N]
         boxes: Bounding boxes [N, 4]
-        iou_threshold: IoU threshold for merging (default: 0.3)
+        iou_threshold: IoU threshold for merging (default: 0.5)
 
     Returns:
         Tuple of (merged_masks, merged_scores, merged_boxes)
@@ -377,7 +377,7 @@ def merge_overlapping_masks(binary_masks, scores, boxes, iou_threshold=0.3):
     return merged_masks, merged_scores, merged_boxes
 
 
-def convert_predictions_to_coco_format(predictions_list, image_ids, resolution=288, score_threshold=0.0, merge_overlaps=True, iou_threshold=0.3, debug=False):
+def convert_predictions_to_coco_format(predictions_list, image_ids, resolution=288, score_threshold=0.0, merge_overlaps=True, iou_threshold=0.5, debug=False):
     """
     Convert model predictions to COCO format for evaluation.
 
@@ -390,7 +390,7 @@ def convert_predictions_to_coco_format(predictions_list, image_ids, resolution=2
         resolution: Mask resolution for evaluation (default: 288, model's native output)
         score_threshold: Minimum score threshold for predictions
         merge_overlaps: Whether to merge overlapping predictions (default: True)
-        iou_threshold: IoU threshold for merging overlaps (default: 0.3)
+        iou_threshold: IoU threshold for merging overlaps (default: 0.5)
         debug: Print debug information
 
     Returns:
@@ -546,7 +546,7 @@ def create_coco_gt_from_dataset(dataset, image_ids=None, mask_resolution=288):
     return coco_gt
 
 
-def convert_predictions_to_coco_format_original_res(predictions_list, image_ids, dataset, model_resolution=288, score_threshold=0.0, merge_overlaps=True, iou_threshold=0.3, debug=False):
+def convert_predictions_to_coco_format_original_res(predictions_list, image_ids, dataset, model_resolution=288, score_threshold=0.0, merge_overlaps=True, iou_threshold=0.5, debug=False):
     """
     Convert model predictions to COCO format at ORIGINAL image resolution.
 

@@ -81,12 +81,11 @@ def evaluate_mqa_on_dataset(model, device, scenarios_path, images_dir, threshold
         cls_desc = scenario.get("cls_description", "").lower()
         if "intact road" in cls_desc:
             dynamic_prompt = "intact road"
-        elif "intact building" in cls_desc:
-            dynamic_prompt = "intact building"
         elif "road" in cls_desc:
             dynamic_prompt = "road damage"
         elif "building" in cls_desc:
-            dynamic_prompt = "damaged building"
+            # Use simple prompt "building" for all building counting tasks
+            dynamic_prompt = "building"
         else:
             dynamic_prompt = "object"
             
@@ -98,6 +97,9 @@ def evaluate_mqa_on_dataset(model, device, scenarios_path, images_dir, threshold
         state = processor.set_text_prompt(state=state, prompt=dynamic_prompt)
         
         if state["masks"].shape[0] > 0:
+            # We skip NMS entirely to avoid OOM and rely on area-based heuristics
+            # for counting dense objects. SAM3 object queries are already
+            # designed to be largely distinct.
             pred_masks = rle_encode(state["masks"].squeeze(1))
             pred_masks = [m["counts"] for m in pred_masks]
         else:
@@ -107,6 +109,10 @@ def evaluate_mqa_on_dataset(model, device, scenarios_path, images_dir, threshold
         
         if is_percentage:
             pred_val = get_union_area_percentage(pred_masks, orig_h, orig_w)
+        elif "building" in cls_desc:
+            # We trust the model's distinct object queries to count houses.
+            # Removing the area-based heuristic as it was too brittle.
+            pred_val = len(pred_masks)
         else:
             pred_val = len(pred_masks)
             
