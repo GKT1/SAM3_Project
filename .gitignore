@@ -9,5 +9,5 @@ logs/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-
+test_data/
 disaster_subset_coco/

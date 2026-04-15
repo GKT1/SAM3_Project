@@ -68,7 +68,7 @@ dumps/
 Thumbs.db
 
 # Temporary files
-.log
+*.log
 # *.tmp
 # *.temp
 .hf_home/
