@@ -43,10 +43,10 @@ ENV/
 
 # Training outputs
 outputs/
-# experiments/
-# logs/
-# checkpoints/
-# dumps/
+experiments/
+logs/
+checkpoints/
+dumps/
 
 # Data
 # /data/
@@ -68,7 +68,7 @@ outputs/
 Thumbs.db
 
 # Temporary files
-# *.log
+.log
 # *.tmp
 # *.temp
-# .hf_home/
+.hf_home/

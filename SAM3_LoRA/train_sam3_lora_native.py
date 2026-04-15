@@ -109,15 +109,17 @@ def print_rank0(*args, **kwargs):
 
 class COCOSegmentDataset(Dataset):
     """Dataset class for COCO format segmentation data"""
-    def __init__(self, data_dir, split="train"):
+    def __init__(self, data_dir, split="train", max_queries_per_image=None):
         """
         Args:
             data_dir: Root directory containing train/valid/test folders
             split: One of 'train', 'valid', 'test'
+            max_queries_per_image: Maximum number of categories/queries per image
         """
         self.data_dir = Path(data_dir)
         self.split = split
         self.split_dir = self.data_dir / split
+        self.max_queries_per_image = max_queries_per_image
 
         # Load COCO annotations
         ann_file = self.split_dir / "_annotations.coco.json"
@@ -266,7 +268,16 @@ class COCOSegmentDataset(Dataset):
         # Create one query per category
         queries = []
         if len(class_to_object_ids) > 0:
-            for query_text, obj_ids in class_to_object_ids.items():
+            category_names = list(class_to_object_ids.keys())
+            
+            # Limit number of categories (queries) if needed (random sampling)
+            if self.max_queries_per_image and len(category_names) > self.max_queries_per_image:
+                import random
+                category_names = random.sample(category_names, self.max_queries_per_image)
+            
+            for query_text in category_names:
+                obj_ids = class_to_object_ids[query_text]
+                
                 query = FindQueryLoaded(
                     query_text=query_text,
                     image_id=0,
@@ -785,11 +796,16 @@ class SAM3TrainerNative:
 
         # Build Model
         print_rank0("Building SAM3 model...")
+        
+        # Correctly resolve bpe_path relative to this script's directory
+        script_dir = Path(__file__).parent.absolute()
+        bpe_path = str(script_dir / "sam3/assets/bpe_simple_vocab_16e6.txt.gz")
+        
         self.model = build_sam3_image_model(
             device=self.device.type,
             compile=False,
             load_from_HF=True,  # Tries to download from HF if checkpoint_path is None
-            bpe_path="sam3/assets/bpe_simple_vocab_16e6.txt.gz",
+            bpe_path=bpe_path,
             eval_mode=False
         )
 
@@ -857,6 +873,13 @@ class SAM3TrainerNative:
             weight_decay=self.config["training"]["weight_decay"]
         )
         
+        # Setup Mixed Precision
+        self.mixed_precision = self.config["training"].get("mixed_precision", None)
+        self.scaler = torch.cuda.amp.GradScaler(enabled=(self.mixed_precision == "fp16"))
+        
+        if self.mixed_precision:
+            print_rank0(f"Mixed precision enabled: {self.mixed_precision}")
+        
         # Matcher & Loss
         self.matcher = BinaryHungarianMatcherV2(
             cost_class=2.0, cost_bbox=5.0, cost_giou=2.0, focal=True
@@ -913,10 +936,20 @@ class SAM3TrainerNative:
     def train(self):
         # Get data directory from config (should point to directory containing train/valid folders)
         data_dir = self.config["training"]["data_dir"]
+        
+        # Memory optimization settings from config
+        max_queries = self.config["training"].get("max_queries_per_image", None)
+        
+        if max_queries:
+            print_rank0(f"Memory optimization: max_queries_per_image={max_queries}")
 
         # Load datasets using COCO format
         print_rank0(f"\nLoading training data from {data_dir}...")
-        train_ds = COCOSegmentDataset(data_dir=data_dir, split="train")
+        train_ds = COCOSegmentDataset(
+            data_dir=data_dir, 
+            split="train",
+            max_queries_per_image=max_queries
+        )
 
         if self.max_train_samples is not None and self.max_train_samples < len(train_ds):
             print_rank0(f"Limiting training dataset to {self.max_train_samples} samples")
@@ -932,7 +965,11 @@ class SAM3TrainerNative:
 
         try:
             print_rank0(f"\nLoading validation data from {data_dir}...")
-            val_ds = COCOSegmentDataset(data_dir=data_dir, split="valid")
+            val_ds = COCOSegmentDataset(
+                data_dir=data_dir, 
+                split="valid",
+                max_queries_per_image=max_queries
+            )
             if len(val_ds) > 0:
                 has_validation = True
                 print_rank0(f"Found validation data: {len(val_ds)} images")
@@ -1054,48 +1091,52 @@ class SAM3TrainerNative:
                 # Move to device
                 input_batch = move_to_device(input_batch, self.device)
 
-                # Forward pass
-                # outputs_list is SAM3Output, we need to pass the whole thing to loss_wrapper
-                outputs_list = self.model(input_batch)
+                # Determine autocast type
+                autocast_dtype = torch.float32
+                if self.mixed_precision == "bf16":
+                    autocast_dtype = torch.bfloat16
+                elif self.mixed_precision == "fp16":
+                    autocast_dtype = torch.float16
 
-                # Prepare targets for loss
-                # input_batch.find_targets is a list of BatchedFindTarget (one per stage)
-                find_targets = [self._unwrapped_model.back_convert(target) for target in input_batch.find_targets]
+                # Forward pass with Mixed Precision
+                with torch.cuda.amp.autocast(enabled=self.mixed_precision is not None, dtype=autocast_dtype):
+                    # Forward pass
+                    outputs_list = self.model(input_batch)
 
-                # Move targets to device
-                for targets in find_targets:
-                    for k, v in targets.items():
-                        if isinstance(v, torch.Tensor):
-                            targets[k] = v.to(self.device)
+                    # Prepare targets for loss
+                    find_targets = [self._unwrapped_model.back_convert(target) for target in input_batch.find_targets]
 
-                # Add matcher indices to outputs (required by Sam3LossWrapper)
-                # Use SAM3Output.iteration_mode to properly iterate over outputs
-                with SAM3Output.iteration_mode(
-                    outputs_list, iter_mode=SAM3Output.IterMode.ALL_STEPS_PER_STAGE
-                ) as outputs_iter:
-                    for stage_outputs, stage_targets in zip(outputs_iter, find_targets):
-                        # stage_targets is a single target dict, replicate for all steps
-                        stage_targets_list = [stage_targets] * len(stage_outputs)
-                        for outputs, targets in zip(stage_outputs, stage_targets_list):
-                            # Compute indices for main output
-                            outputs["indices"] = self.matcher(outputs, targets)
+                    # Move targets to device
+                    for targets in find_targets:
+                        for k, v in targets.items():
+                            if isinstance(v, torch.Tensor):
+                                targets[k] = v.to(self.device)
 
-                            # Also add indices to auxiliary outputs if they exist
-                            if "aux_outputs" in outputs:
-                                for aux_out in outputs["aux_outputs"]:
-                                    aux_out["indices"] = self.matcher(aux_out, targets)
+                    # Add matcher indices to outputs (required by Sam3LossWrapper)
+                    with SAM3Output.iteration_mode(
+                        outputs_list, iter_mode=SAM3Output.IterMode.ALL_STEPS_PER_STAGE
+                    ) as outputs_iter:
+                        for stage_outputs, stage_targets in zip(outputs_iter, find_targets):
+                            stage_targets_list = [stage_targets] * len(stage_outputs)
+                            for outputs, targets in zip(stage_outputs, stage_targets_list):
+                                outputs["indices"] = self.matcher(outputs, targets)
+                                if "aux_outputs" in outputs:
+                                    for aux_out in outputs["aux_outputs"]:
+                                        aux_out["indices"] = self.matcher(aux_out, targets)
 
-                # Compute loss using Sam3LossWrapper
-                # This handles num_boxes calculation and proper weighting
-                loss_dict = self.loss_wrapper(outputs_list, find_targets)
+                    # Compute loss
+                    loss_dict = self.loss_wrapper(outputs_list, find_targets)
+                    total_loss = loss_dict[CORE_LOSS_KEY]
 
-                # Extract total loss
-                total_loss = loss_dict[CORE_LOSS_KEY]
-
-                # Backward
+                # Backward with scaling if fp16
                 self.optimizer.zero_grad()
-                total_loss.backward()
-                self.optimizer.step()
+                if self.mixed_precision == "fp16":
+                    self.scaler.scale(total_loss).backward()
+                    self.scaler.step(self.optimizer)
+                    self.scaler.update()
+                else:
+                    total_loss.backward()
+                    self.optimizer.step()
 
                 # Track training loss
                 train_losses.append(total_loss.item())

@@ -43,6 +43,7 @@ def parse_args():
     parser.add_argument("--num_images", type=int, default=200, help="Target number of images to sample (default: 200)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     parser.add_argument("--include_sar", action="store_true", help="Include SAR (radar) images (default: false, only optical used)")
+    parser.add_argument("--filter_json", type=str, default="", help="Path to a filtered JSON file to select specific images")
     return parser.parse_args()
 
 def setup_dirs(out_dir):
@@ -88,22 +89,54 @@ def create_coco_structure():
         ]
     }
 
-def process(data_dir, out_dir, target_images, include_sar=False):
+def process(data_dir, out_dir, target_images, include_sar=False, filter_json_path=""):
     setup_dirs(out_dir)
     image_to_masks = find_masks(data_dir, include_sar)
     
     # Get all valid unique image base names
     all_images = list(image_to_masks.keys())
     
-    # Shuffle and pick target_images
-    random.shuffle(all_images)
+    selected_images = all_images
     
-    # If target is larger than available, use all
-    if target_images > len(all_images):
-        print(f"Requested {target_images} images but only {len(all_images)} available. Using all available images.")
-        target_images = len(all_images)
+    # Filter by JSON if provided
+    if filter_json_path and os.path.exists(filter_json_path):
+        print(f"Filtering images based on {filter_json_path}")
+        with open(filter_json_path, 'r') as f:
+            filtered_data = json.load(f)
         
-    selected_images = all_images[:target_images]
+        # Extract base names from the JSON. 
+        # e.g. "train_images\\bata_explosion_post_0.png" -> "bata_explosion_post_0"
+        allowed_bases = set()
+        for item in filtered_data:
+            post_path = item.get("post_image_path", "")
+            if post_path:
+                # Handle Windows and Unix slashes
+                filename = post_path.replace('\\', '/').split('/')[-1]
+                base = filename.rsplit('.', 1)[0]
+                base = base.replace('_post_disaster', '').replace('_post', '')
+                allowed_bases.add(base)
+                
+                pre_path = item.get("pre_image_path", "")
+                if pre_path:
+                    pre_filename = pre_path.replace('\\', '/').split('/')[-1]
+                    pre_base = pre_filename.rsplit('.', 1)[0]
+                    pre_base = pre_base.replace('_pre_disaster', '').replace('_pre', '')
+                    allowed_bases.add(pre_base)
+                    
+        # Filter all_images
+        selected_images = [img for img in all_images if img in allowed_bases]
+        print(f"Images after JSON filtering: {len(selected_images)} (from {len(all_images)} found in masks)")
+        target_images = len(selected_images)
+    else:
+        # Shuffle and pick target_images
+        random.shuffle(all_images)
+        
+        # If target is larger than available, use all
+        if target_images > len(all_images):
+            print(f"Requested {target_images} images but only {len(all_images)} available. Using all available images.")
+            target_images = len(all_images)
+            
+        selected_images = all_images[:target_images]
     
     # Split: 80% train, 20% valid
     split_idx = int(len(selected_images) * 0.8)
@@ -215,5 +248,5 @@ if __name__ == '__main__':
     data_dir = Path(args.data_dir)
     out_dir = Path(args.out_dir)
     
-    process(data_dir, out_dir, args.num_images, args.include_sar)
+    process(data_dir, out_dir, args.num_images, args.include_sar, args.filter_json)
     print("COCO dataset generation complete!")
